@@ -1,0 +1,46 @@
+================================================================================
+URL DE POLITIQUE DE CONFIDENTIALITÉ — À COLLER DANS LA PLAY CONSOLE
+================================================================================
+
+Emplacement dans la console :
+    <application> > Contenu de l'application > Politique de confidentialité
+
+DOMAINE
+-------
+    https://haythemstudio.com/
+
+LES CINQ ADRESSES
+-----------------
+
+  صيد الكلمات / Word Hunt
+      com.haythemstudio.motsmeles
+      https://haythemstudio.com/privacy/motsmeles/
+
+  Parking Puzzle
+      com.haythemstudio.parkingpuzzle
+      https://haythemstudio.com/privacy/parkingpuzzle/
+
+  Boussole Qibla
+      com.haythemstudio.qiblafr
+      https://haythemstudio.com/privacy/qiblafr/
+
+  Puzzle Arcade
+      com.haythemstudio.arcadelab
+      https://haythemstudio.com/privacy/arcadelab/
+
+  One Line Puzzle
+      com.haythemstudio.onelinepuzzle
+      https://haythemstudio.com/privacy/onelinepuzzle/
+
+INDEX PUBLIC
+------------
+      https://haythemstudio.com/privacy/
+
+CONTACT DÉCLARÉ SUR CHAQUE PAGE
+-------------------------------
+      GNeurone AI — rehoumahaythem@gmail.com
+
+VÉRIFICATION
+------------
+Chaque URL doit s'ouvrir sans mot de passe, sans redirection bloquante et sans
+bandeau de cookies. Google vérifie l'accessibilité réelle de l'adresse.
