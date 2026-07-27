@@ -35,7 +35,8 @@ jobs:
             privacy/arcadelab/index.html \
             privacy/onelinepuzzle/index.html \
             assets/styles.css \
-            assets/main.js
+            assets/main.js \
+            assets/favicon.svg
           do
             test -f "$path" || { echo "Missing $path"; exit 1; }
           done
