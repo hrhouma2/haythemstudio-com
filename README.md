@@ -10,7 +10,18 @@ Cinq langues : anglais (langue principale), français, arabe, espagnol, portugai
 | `content/apps.mjs` | Données des applications, illustrations SVG, liste des langues |
 | `content/strings.mjs` | Tous les textes, une entrée par langue |
 | `build.mjs` | Génère les pages HTML de toutes les langues |
-| `assets/` | CSS, JavaScript, favicon (partagés par toutes les langues) |
+| `assets/` | CSS, JavaScript, logo (partagés par toutes les langues) |
+
+Fichiers de marque :
+
+| Fichier | Usage |
+|---------|-------|
+| `assets/logo-mark.svg` | Signe seul (tuile carrée), pour icônes et avatars |
+| `assets/logo.svg` | Verrouillage horizontal signe + nom, pour presse et réseaux |
+| `assets/favicon.svg` | Version simplifiée pour les onglets du navigateur |
+
+Le signe est repris en SVG inline dans la navigation (`brandLogo` dans `build.mjs`) :
+toute modification du dessin doit être reportée dans ces quatre endroits.
 
 Pages générées (à committer, Vercel sert du statique) :
 

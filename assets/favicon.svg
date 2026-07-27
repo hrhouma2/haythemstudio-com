@@ -1,11 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Haythem Studio">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3ddc97"/>
-      <stop offset="1" stop-color="#4cc9f0"/>
+    <linearGradient id="fTile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123024"/>
+      <stop offset="1" stop-color="#040a08"/>
+    </linearGradient>
+    <linearGradient id="fStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#64f2b2"/>
+      <stop offset="1" stop-color="#2bb684"/>
+    </linearGradient>
+    <linearGradient id="fBlocks" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4cc9f0"/>
+      <stop offset=".52" stop-color="#3ddc97"/>
+      <stop offset="1" stop-color="#f5c46b"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#070b0a"/>
-  <rect x="4" y="4" width="56" height="56" rx="13" fill="url(#g)" opacity="0.16"/>
-  <path d="M20 44V20M44 44V20M20 32h24" stroke="url(#g)" stroke-width="6" stroke-linecap="round"/>
+
+  <rect width="48" height="48" rx="12" fill="url(#fTile)"/>
+  <rect x="11" y="11" width="8" height="26" rx="4" fill="url(#fStem)"/>
+  <rect x="11" y="21" width="26" height="6" rx="3" fill="url(#fStem)"/>
+  <rect x="29" y="11" width="8" height="26" rx="4" fill="url(#fBlocks)"/>
+  <path d="M29 19.6h8M29 28.4h8" stroke="#050d0a" stroke-width="1.9"/>
 </svg>

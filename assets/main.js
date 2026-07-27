@@ -98,20 +98,6 @@
     counters.forEach((el) => countObserver.observe(el));
   }
 
-  /* ---------- Phone slideshow ---------- */
-
-  const slides = document.querySelectorAll(".phone-screen .slide");
-  const caption = document.querySelector("[data-phone-caption]");
-  if (slides.length > 1) {
-    let index = 0;
-    setInterval(() => {
-      slides[index].classList.remove("is-active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("is-active");
-      if (caption) caption.textContent = slides[index].dataset.caption || "";
-    }, 3200);
-  }
-
   /* ---------- Pointer-follow glow on cards ---------- */
 
   if (window.matchMedia("(hover: hover)").matches) {
@@ -124,21 +110,4 @@
     });
   }
 
-  /* ---------- Subtle tilt on the phone mockup ---------- */
-
-  const tiltTarget = document.querySelector("[data-tilt]");
-  if (tiltTarget && !reduceMotion && window.matchMedia("(hover: hover)").matches) {
-    const wrapper = tiltTarget.parentElement;
-    wrapper.addEventListener("pointermove", (event) => {
-      const rect = wrapper.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      tiltTarget.style.animation = "none";
-      tiltTarget.style.transform = `perspective(900px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
-    });
-    wrapper.addEventListener("pointerleave", () => {
-      tiltTarget.style.transform = "";
-      tiltTarget.style.animation = "";
-    });
-  }
 })();

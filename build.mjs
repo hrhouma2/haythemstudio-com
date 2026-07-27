@@ -80,15 +80,48 @@ const themeButton = (locale) => `        <button class="theme-toggle" type="butt
           </svg>
         </button>`;
 
+/** Monogram: the left stem is solid, the right one is built from three puzzle blocks. */
+const brandLogo = `<span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="34" height="34">
+            <defs>
+              <linearGradient id="hsTile" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#102a21"/>
+                <stop offset="1" stop-color="#050c0a"/>
+              </linearGradient>
+              <linearGradient id="hsStem" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#5ef0ae"/>
+                <stop offset="1" stop-color="#2bb684"/>
+              </linearGradient>
+              <linearGradient id="hsBlocks" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4cc9f0"/>
+                <stop offset=".52" stop-color="#3ddc97"/>
+                <stop offset="1" stop-color="#f5c46b"/>
+              </linearGradient>
+              <radialGradient id="hsGlow" cx="24%" cy="10%" r="88%">
+                <stop offset="0" stop-color="#3ddc97" stop-opacity=".38"/>
+                <stop offset="1" stop-color="#3ddc97" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="48" height="48" rx="13" fill="url(#hsTile)"/>
+            <rect width="48" height="48" rx="13" fill="url(#hsGlow)"/>
+            <path d="M5 35.5 43 12.5" stroke="#3ddc97" stroke-opacity=".16" stroke-width="1.6" stroke-linecap="round"/>
+            <rect x="12" y="12" width="7" height="24" rx="3.5" fill="url(#hsStem)"/>
+            <rect x="12" y="21.5" width="24" height="5" rx="2.5" fill="url(#hsStem)"/>
+            <rect x="29" y="12" width="7" height="24" rx="3.5" fill="url(#hsBlocks)"/>
+            <path class="logo-grooves" d="M29 19.6h7M29 28.4h7" stroke="#07120e" stroke-width="1.7"/>
+            <rect x=".75" y=".75" width="46.5" height="46.5" rx="12.4" fill="none" stroke="#3ddc97" stroke-opacity=".3"/>
+          </svg>
+        </span>`;
+
 const nav = (locale, rest, { onHome = false } = {}) => {
   const t = strings[locale].nav;
   const home = path(locale, "/");
   const anchor = (id) => (onHome ? `#${id}` : `${home}#${id}`);
   return `  <nav class="site-nav">
     <div class="wrap">
-      <a class="brand-mark" href="${home}">
-        <span class="brand-glyph" aria-hidden="true">H</span>
-        Haythem<span>Studio</span>
+      <a class="brand-mark" href="${home}" aria-label="Haythem Studio">
+        ${brandLogo}
+        <span class="brand-word">Haythem <span>Studio</span></span>
       </a>
       <div class="nav-right">
         <ul class="nav-links">
@@ -118,7 +151,8 @@ ${head({ locale, title, description, rest, ogTitle, ogDescription })}
 
 ${body}
 
-  <script src="/assets/main.js"></script>
+  <script src="/assets/main.js" defer></script>
+  ${body.includes("data-jellyfish") ? '<script src="/assets/jellyfish.js" defer></script>' : ""}
 </body>
 </html>
 `;
@@ -202,19 +236,9 @@ const homeBody = (locale) => {
           ${t.hero.chipOffline}
         </div>
 
-        <div class="phone" data-tilt>
-          <div class="phone-screen">
-${phoneSlides
-  .map(
-    (slide, i) => `            <div class="slide${i === 0 ? " is-active" : ""}" data-caption="${
-      apps.find((a) => a.key === slide.key).short
-    }">
-              ${slide.svg}
-            </div>`
-  )
-  .join("\n")}
-            <p class="phone-caption" data-phone-caption>${apps.find((a) => a.key === phoneSlides[0].key).short}</p>
-          </div>
+        <div class="jellyfish-stage">
+          <canvas data-jellyfish aria-hidden="true"></canvas>
+          <div class="jellyfish-fallback" aria-hidden="true"></div>
         </div>
       </div>
     </div>
