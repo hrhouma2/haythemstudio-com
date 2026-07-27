@@ -1,16 +1,19 @@
 ================================================================================
-URL DE POLITIQUE DE CONFIDENTIALITÉ — À COLLER DANS LA PLAY CONSOLE
+URL DE POLITIQUE DE CONFIDENTIALITE — A COLLER DANS LA PLAY CONSOLE
 ================================================================================
 
 Emplacement dans la console :
-    <application> > Contenu de l'application > Politique de confidentialité
+    <application> > Contenu de l'application > Politique de confidentialite
 
 DOMAINE
 -------
     https://haythemstudio.com/
 
-LES CINQ ADRESSES
------------------
+LES CINQ ADRESSES (VERSION ANGLAISE, A DECLARER DANS LA PLAY CONSOLE)
+---------------------------------------------------------------------
+La Play Console n'accepte qu'une seule URL par application. Utilisez la version
+anglaise : chaque page renvoie vers les quatre autres langues via le selecteur
+de langue en haut, et les balises hreflang indiquent les equivalents a Google.
 
   صيد الكلمات / Word Hunt
       com.haythemstudio.motsmeles
@@ -32,15 +35,29 @@ LES CINQ ADRESSES
       com.haythemstudio.onelinepuzzle
       https://haythemstudio.com/privacy/onelinepuzzle/
 
+MEMES PAGES DANS LES AUTRES LANGUES
+-----------------------------------
+Remplacez <app> par motsmeles, parkingpuzzle, qiblafr, arcadelab ou onelinepuzzle.
+
+  Anglais    https://haythemstudio.com/privacy/<app>/
+  Francais   https://haythemstudio.com/fr/privacy/<app>/
+  Arabe      https://haythemstudio.com/ar/privacy/<app>/
+  Espagnol   https://haythemstudio.com/es/privacy/<app>/
+  Portugais  https://haythemstudio.com/pt/privacy/<app>/
+
 INDEX PUBLIC
 ------------
-      https://haythemstudio.com/privacy/
+      https://haythemstudio.com/privacy/         (anglais)
+      https://haythemstudio.com/fr/privacy/      (francais)
+      https://haythemstudio.com/ar/privacy/      (arabe)
+      https://haythemstudio.com/es/privacy/      (espagnol)
+      https://haythemstudio.com/pt/privacy/      (portugais)
 
-CONTACT DÉCLARÉ SUR CHAQUE PAGE
+CONTACT DECLARE SUR CHAQUE PAGE
 -------------------------------
       GNeurone AI — rehoumahaythem@gmail.com
 
-VÉRIFICATION
+VERIFICATION
 ------------
 Chaque URL doit s'ouvrir sans mot de passe, sans redirection bloquante et sans
-bandeau de cookies. Google vérifie l'accessibilité réelle de l'adresse.
+banniere de cookies. Google verifie l'accessibilite reelle de l'adresse.

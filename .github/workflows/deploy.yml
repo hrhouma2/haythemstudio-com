@@ -23,20 +23,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Rebuild pages from content sources
+        run: node build.mjs
+
+      - name: Fail if generated pages are stale
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::Les pages generees ne correspondent pas au contenu. Lancez 'node build.mjs' et committez le resultat."
+            git --no-pager diff --stat
+            exit 1
+          fi
+
       - name: Check required pages
         run: |
           set -euo pipefail
-          for path in \
-            index.html \
-            privacy/index.html \
-            privacy/motsmeles/index.html \
-            privacy/parkingpuzzle/index.html \
-            privacy/qiblafr/index.html \
-            privacy/arcadelab/index.html \
-            privacy/onelinepuzzle/index.html \
-            assets/styles.css \
-            assets/main.js \
-            assets/favicon.svg
+          for locale in "" fr ar es pt
+          do
+            prefix="${locale:+$locale/}"
+            for path in \
+              "${prefix}index.html" \
+              "${prefix}privacy/index.html" \
+              "${prefix}privacy/motsmeles/index.html" \
+              "${prefix}privacy/parkingpuzzle/index.html" \
+              "${prefix}privacy/qiblafr/index.html" \
+              "${prefix}privacy/arcadelab/index.html" \
+              "${prefix}privacy/onelinepuzzle/index.html"
+            do
+              test -f "$path" || { echo "Missing $path"; exit 1; }
+            done
+          done
+          for path in assets/styles.css assets/main.js assets/favicon.svg sitemap.xml robots.txt
           do
             test -f "$path" || { echo "Missing $path"; exit 1; }
           done
