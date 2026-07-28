@@ -547,11 +547,14 @@ a {
   50% { opacity: 0.55; transform: scale(0.82); }
 }
 
+/* La boite de la police d'affichage fait 1.21em : en dessous de 1.09em de
+   hauteur de ligne, les jambages sortent du bloc et le masque d'entree les
+   coupe. */
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.2rem, 4.2vw, 3.25rem);
-  line-height: 1.02;
+  line-height: 1.1;
   letter-spacing: -0.045em;
   margin: 1.25rem 0 1.15rem;
 }
@@ -560,8 +563,8 @@ a {
 .hero h1 .line {
   display: block;
   overflow: hidden;
-  padding-block: 0.06em 0.1em;
-  margin-block: -0.06em -0.1em;
+  padding-block: 0.08em 0.16em;
+  margin-block: -0.08em -0.16em;
 }
 
 .hero h1 .line > span {
@@ -783,7 +786,7 @@ a {
   font-size: clamp(1.9rem, 4.4vw, 2.9rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.06;
+  line-height: 1.1;
   margin-bottom: 0.7rem;
 }
 
