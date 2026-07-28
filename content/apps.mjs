@@ -13,6 +13,10 @@ export const localeMeta = {
   pt: { label: "Português", short: "PT", dir: "ltr", base: "/pt" },
 };
 
+/**
+ * Une entrée par application publiée. `levels` alimente le compteur du hero :
+ * l'omettre pour une application sans niveaux dénombrables.
+ */
 export const apps = [
   {
     slug: "qiblafr",
@@ -46,6 +50,7 @@ export const apps = [
     pkg: "com.haythemstudio.parkingpuzzle",
     accent: "#4cc9f0",
     tag: "puzzle",
+    levels: 60,
     permissions: "none",
     storage: "game",
   },
@@ -57,6 +62,7 @@ export const apps = [
     pkg: "com.haythemstudio.arcadelab",
     accent: "#3ddc97",
     tag: "collection",
+    levels: 15,
     permissions: "none",
     storage: "game",
   },
@@ -68,6 +74,7 @@ export const apps = [
     pkg: "com.haythemstudio.onelinepuzzle",
     accent: "#4cc9f0",
     tag: "minimal",
+    levels: 45,
     permissions: "none",
     storage: "game",
   },

@@ -11,8 +11,8 @@ export const strings = {
     home: {
       title: "Haythem Studio — Android games and tools that work offline",
       description:
-        "Five Android apps by GNeurone AI: a parking puzzle, one-line drawing, fifteen arcade classics, an Arabic word search and a Qibla compass. They open in a second and keep working without a signal.",
-      ogDescription: "Five Android apps that open in a second and keep working without a signal.",
+        "Android games and tools by GNeurone AI: a parking puzzle, one-line drawing, arcade classics, an Arabic word search, a Qibla compass and more. They open in a second and keep working without a signal.",
+      ogDescription: "Android apps that open in a second and keep working without a signal.",
     },
     nav: {
       apps: "Applications",
@@ -25,12 +25,12 @@ export const strings = {
       menuClose: "Close the menu",
     },
     hero: {
-      badge: "Five apps live on Google Play",
+      badge: "Live on Google Play",
       line1: "Games that",
       line2: "just work,",
       line3: "even offline.",
       lede:
-        "Haythem Studio makes Android apps that open in a second and keep going without a signal. Four puzzle games and a Qibla compass, published by GNeurone AI and fully unlocked from the first launch.",
+        "Haythem Studio makes Android apps that open in a second and keep going without a signal. Puzzle games and everyday tools, published by GNeurone AI and fully unlocked from the first launch.",
       ctaPrimary: "Browse the apps",
       ctaSecondary: "Our privacy promise",
       statApps: "Apps on Google Play",
@@ -51,14 +51,14 @@ export const strings = {
       eyebrow: "The catalogue",
       title: "Pick your next puzzle",
       lede:
-        "Four games and one everyday companion. Each one is published under the GNeurone AI account and runs entirely on your device.",
+        "Games and everyday companions, and the list keeps growing. Each one is published under the GNeurone AI account and runs entirely on your device.",
       cardLink: "Privacy",
     },
     principles: {
       eyebrow: "How they are built",
       title: "Made to stay on your phone",
       lede:
-        "Four commitments written into the code shipped on Google Play, not options buried in a settings screen.",
+        "Commitments written into the code shipped on Google Play, not options buried in a settings screen.",
       items: [
         {
           title: "Everything stays with you",
@@ -216,8 +216,8 @@ export const strings = {
     home: {
       title: "Haythem Studio — Des jeux et outils Android qui marchent hors ligne",
       description:
-        "Cinq applications Android éditées par GNeurone AI : casse-tête de parking, tracé en un trait, quinze classiques d’arcade, mots mêlés arabes et boussole Qibla. Elles s’ouvrent en une seconde et continuent sans réseau.",
-      ogDescription: "Cinq applications Android qui s’ouvrent en une seconde et continuent sans réseau.",
+        "Jeux et outils Android édités par GNeurone AI : casse-tête de parking, tracé en un trait, classiques d’arcade, mots mêlés arabes, boussole Qibla et d’autres encore. Ils s’ouvrent en une seconde et continuent sans réseau.",
+      ogDescription: "Des applications Android qui s’ouvrent en une seconde et continuent sans réseau.",
     },
     nav: {
       apps: "Applications",
@@ -230,12 +230,12 @@ export const strings = {
       menuClose: "Fermer le menu",
     },
     hero: {
-      badge: "Cinq applications sur Google Play",
+      badge: "En ligne sur Google Play",
       line1: "Des jeux qui",
       line2: "fonctionnent",
       line3: "hors ligne.",
       lede:
-        "Haythem Studio conçoit des applications Android qui s’ouvrent en une seconde et continuent sans réseau. Quatre casse-têtes et une boussole Qibla, éditées par GNeurone AI et débloquées dès le premier lancement.",
+        "Haythem Studio conçoit des applications Android qui s’ouvrent en une seconde et continuent sans réseau. Des casse-têtes et des outils du quotidien, édités par GNeurone AI et débloqués dès le premier lancement.",
       ctaPrimary: "Voir les applications",
       ctaSecondary: "Notre engagement",
       statApps: "Applications sur Google Play",
@@ -256,14 +256,14 @@ export const strings = {
       eyebrow: "Le catalogue",
       title: "Choisissez votre prochain casse-tête",
       lede:
-        "Quatre jeux et un compagnon du quotidien. Chacun est publié sous le compte GNeurone AI et tourne intégralement sur votre appareil.",
+        "Des jeux et des compagnons du quotidien, et la liste s’allonge. Chacun est publié sous le compte GNeurone AI et tourne intégralement sur votre appareil.",
       cardLink: "Confidentialité",
     },
     principles: {
       eyebrow: "Comment elles sont faites",
       title: "Conçues pour rester sur votre téléphone",
       lede:
-        "Quatre engagements inscrits dans le code livré sur Google Play, et non des options enfouies dans un écran de réglages.",
+        "Des engagements inscrits dans le code livré sur Google Play, et non des options enfouies dans un écran de réglages.",
       items: [
         {
           title: "Tout reste chez vous",
@@ -421,8 +421,8 @@ export const strings = {
     home: {
       title: "Haythem Studio — ألعاب وأدوات أندرويد تعمل دون إنترنت",
       description:
-        "خمسة تطبيقات أندرويد من GNeurone AI: لغز مواقف السيارات، الرسم بخط واحد، خمسة عشر لعبة أركيد كلاسيكية، بحث عن الكلمات بالعربية، وبوصلة القبلة. تفتح في ثانية وتواصل العمل دون شبكة.",
-      ogDescription: "خمسة تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة.",
+        "ألعاب وأدوات أندرويد من GNeurone AI: لغز مواقف السيارات، الرسم بخط واحد، كلاسيكيات الأركيد، بحث عن الكلمات بالعربية، بوصلة القبلة وغيرها. تفتح في ثانية وتواصل العمل دون شبكة.",
+      ogDescription: "تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة.",
     },
     nav: {
       apps: "التطبيقات",
@@ -435,12 +435,12 @@ export const strings = {
       menuClose: "إغلاق القائمة",
     },
     hero: {
-      badge: "خمسة تطبيقات على Google Play",
+      badge: "متاحة على Google Play",
       line1: "ألعاب وأدوات",
       line2: "تعمل ببساطة،",
       line3: "حتى دون إنترنت.",
       lede:
-        "يصنع Haythem Studio تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة. أربع ألعاب ألغاز وبوصلة قبلة، تنشرها GNeurone AI ومفتوحة بالكامل منذ التشغيل الأول.",
+        "يصنع Haythem Studio تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة. ألعاب ألغاز وأدوات يومية، تنشرها GNeurone AI ومفتوحة بالكامل منذ التشغيل الأول.",
       ctaPrimary: "تصفّح التطبيقات",
       ctaSecondary: "التزامنا بالخصوصية",
       statApps: "تطبيقات على Google Play",
@@ -460,13 +460,13 @@ export const strings = {
     catalogue: {
       eyebrow: "القائمة",
       title: "اختر لغزك التالي",
-      lede: "أربع ألعاب ورفيق يومي واحد. كلها منشورة تحت حساب GNeurone AI وتعمل بالكامل على جهازك.",
+      lede: "ألعاب ورفاق للاستعمال اليومي، والقائمة تطول. كلها منشورة تحت حساب GNeurone AI وتعمل بالكامل على جهازك.",
       cardLink: "الخصوصية",
     },
     principles: {
       eyebrow: "كيف صُنعت",
       title: "مصمَّمة لتبقى على هاتفك",
-      lede: "أربعة التزامات مكتوبة في الشيفرة المنشورة على Google Play، لا خيارات مدفونة في شاشة إعدادات.",
+      lede: "التزامات مكتوبة في الشيفرة المنشورة على Google Play، لا خيارات مدفونة في شاشة إعدادات.",
       items: [
         {
           title: "كل شيء يبقى عندك",
@@ -611,8 +611,8 @@ export const strings = {
     home: {
       title: "Haythem Studio — Juegos y utilidades Android que funcionan sin conexión",
       description:
-        "Cinco aplicaciones Android de GNeurone AI: rompecabezas de aparcamiento, trazo único, quince clásicos de arcade, sopa de letras en árabe y brújula Qibla. Se abren en un segundo y siguen funcionando sin cobertura.",
-      ogDescription: "Cinco aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura.",
+        "Juegos y utilidades Android de GNeurone AI: rompecabezas de aparcamiento, trazo único, clásicos de arcade, sopa de letras en árabe, brújula Qibla y más. Se abren en un segundo y siguen funcionando sin cobertura.",
+      ogDescription: "Aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura.",
     },
     nav: {
       apps: "Aplicaciones",
@@ -625,12 +625,12 @@ export const strings = {
       menuClose: "Cerrar el menú",
     },
     hero: {
-      badge: "Cinco aplicaciones en Google Play",
+      badge: "Disponibles en Google Play",
       line1: "Juegos que",
       line2: "funcionan",
       line3: "sin conexión.",
       lede:
-        "Haythem Studio crea aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura. Cuatro rompecabezas y una brújula Qibla, publicados por GNeurone AI y desbloqueados desde el primer arranque.",
+        "Haythem Studio crea aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura. Rompecabezas y utilidades del día a día, publicados por GNeurone AI y desbloqueados desde el primer arranque.",
       ctaPrimary: "Ver las aplicaciones",
       ctaSecondary: "Nuestro compromiso",
       statApps: "Aplicaciones en Google Play",
@@ -651,14 +651,14 @@ export const strings = {
       eyebrow: "El catálogo",
       title: "Elija su próximo rompecabezas",
       lede:
-        "Cuatro juegos y un compañero para el día a día. Cada uno se publica bajo la cuenta de GNeurone AI y funciona íntegramente en su dispositivo.",
+        "Juegos y compañeros para el día a día, y la lista sigue creciendo. Cada uno se publica bajo la cuenta de GNeurone AI y funciona íntegramente en su dispositivo.",
       cardLink: "Privacidad",
     },
     principles: {
       eyebrow: "Cómo están hechas",
       title: "Pensadas para quedarse en su teléfono",
       lede:
-        "Cuatro compromisos escritos en el código publicado en Google Play, no opciones enterradas en una pantalla de ajustes.",
+        "Compromisos escritos en el código publicado en Google Play, no opciones enterradas en una pantalla de ajustes.",
       items: [
         {
           title: "Todo se queda con usted",
@@ -816,8 +816,8 @@ export const strings = {
     home: {
       title: "Haythem Studio — Jogos e utilitários Android que funcionam offline",
       description:
-        "Cinco aplicações Android da GNeurone AI: quebra-cabeças de estacionamento, traço único, quinze clássicos de arcade, caça-palavras em árabe e bússola Qibla. Abrem num segundo e continuam sem rede.",
-      ogDescription: "Cinco aplicações Android que abrem num segundo e continuam sem rede.",
+        "Jogos e utilitários Android da GNeurone AI: quebra-cabeças de estacionamento, traço único, clássicos de arcade, caça-palavras em árabe, bússola Qibla e mais. Abrem num segundo e continuam sem rede.",
+      ogDescription: "Aplicações Android que abrem num segundo e continuam sem rede.",
     },
     nav: {
       apps: "Aplicações",
@@ -830,12 +830,12 @@ export const strings = {
       menuClose: "Fechar o menu",
     },
     hero: {
-      badge: "Cinco aplicações no Google Play",
+      badge: "Disponíveis no Google Play",
       line1: "Jogos que",
       line2: "funcionam,",
       line3: "até offline.",
       lede:
-        "A Haythem Studio cria aplicações Android que abrem num segundo e continuam sem rede. Quatro quebra-cabeças e uma bússola Qibla, publicados pela GNeurone AI e desbloqueados desde o primeiro arranque.",
+        "A Haythem Studio cria aplicações Android que abrem num segundo e continuam sem rede. Quebra-cabeças e utilitários do dia a dia, publicados pela GNeurone AI e desbloqueados desde o primeiro arranque.",
       ctaPrimary: "Ver as aplicações",
       ctaSecondary: "O nosso compromisso",
       statApps: "Aplicações no Google Play",
@@ -856,13 +856,13 @@ export const strings = {
       eyebrow: "O catálogo",
       title: "Escolha o seu próximo quebra-cabeças",
       lede:
-        "Quatro jogos e um companheiro para o dia a dia. Cada um é publicado sob a conta da GNeurone AI e funciona inteiramente no seu aparelho.",
+        "Jogos e companheiros para o dia a dia, e a lista continua a crescer. Cada um é publicado sob a conta da GNeurone AI e funciona inteiramente no seu aparelho.",
       cardLink: "Privacidade",
     },
     principles: {
       eyebrow: "Como são feitas",
       title: "Feitas para ficar no seu telemóvel",
-      lede: "Quatro compromissos escritos no código publicado no Google Play, e não opções escondidas num ecrã de definições.",
+      lede: "Compromissos escritos no código publicado no Google Play, e não opções escondidas num ecrã de definições.",
       items: [
         {
           title: "Tudo fica consigo",

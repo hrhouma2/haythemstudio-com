@@ -10,7 +10,27 @@ Cinq langues : anglais (langue principale), français, arabe, espagnol, portugai
 | `content/apps.mjs` | Données des applications, illustrations SVG, liste des langues |
 | `content/strings.mjs` | Tous les textes, une entrée par langue |
 | `build.mjs` | Génère les pages HTML de toutes les langues |
+| `check.mjs` | Vérifie que toutes les pages attendues ont été générées |
 | `assets/` | CSS, JavaScript, logo (partagés par toutes les langues) |
+
+## Ajouter une application
+
+Le catalogue n'est jamais chiffré en dur dans les textes : le nombre
+d'applications et le total de niveaux affichés dans le hero sont calculés à
+partir de `content/apps.mjs`. Ajouter un titre ne demande donc aucune retouche
+de copie.
+
+1. Ajouter une entrée dans `apps` (`content/apps.mjs`). Le champ `levels` est
+   facultatif : il alimente le compteur du hero, l'omettre pour une application
+   sans niveaux dénombrables.
+2. Ajouter l'illustration de la carte dans `cardArt`, sous la même clé `key`.
+3. Ajouter le couple `tagline` / `description` dans les cinq langues de
+   `content/strings.mjs`, et l'étiquette `tags` si la catégorie est nouvelle.
+4. Régénérer avec `npm run check`.
+
+L'étape 4 échoue en listant précisément ce qui manque tant qu'une clé n'est pas
+renseignée ; les pages de confidentialité, le plan du site et le workflow
+GitHub Actions suivent automatiquement.
 
 Fichiers de marque :
 

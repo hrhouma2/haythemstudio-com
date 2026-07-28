@@ -198,6 +198,10 @@ const appCard = (locale, app, index) => {
           </a>`;
 };
 
+// Les chiffres du hero suivent le catalogue : ajouter une application suffit.
+const appCount = apps.length;
+const levelCount = apps.reduce((total, app) => total + (app.levels ?? 0), 0);
+
 const homeBody = (locale) => {
   const t = strings[locale];
   const marquee = t.marquee.map((item) => `<span>${item}</span>`).join("");
@@ -219,11 +223,11 @@ const homeBody = (locale) => {
         </div>
         <div class="stats">
           <div class="stat">
-            <div class="num" data-count="5">5</div>
+            <div class="num" data-count="${appCount}">${appCount}</div>
             <div class="label">${t.hero.statApps}</div>
           </div>
           <div class="stat">
-            <div class="num" data-count="120" data-suffix="+">120+</div>
+            <div class="num" data-count="${levelCount}" data-suffix="+">${levelCount}+</div>
             <div class="label">${t.hero.statLevels}</div>
           </div>
           <div class="stat">
@@ -466,7 +470,31 @@ const write = async (relativePath, html) => {
 
 const outPath = (locale, rest) => `${localeMeta[locale].base}${rest}index.html`.replace(/^\//, "");
 
+/**
+ * Une application ajoutee dans content/apps.mjs a besoin d'une illustration et
+ * d'un texte par langue. Sans ce controle, l'oubli passe en "undefined" dans la
+ * page generee.
+ */
+const checkContent = () => {
+  const gaps = [];
+
+  for (const app of apps) {
+    if (!cardArt[app.key]) gaps.push(`cardArt.${app.key} (illustration de la carte)`);
+    for (const locale of LOCALES) {
+      const t = strings[locale];
+      if (!t.apps[app.key]?.description) gaps.push(`strings.${locale}.apps.${app.key}.description`);
+      if (!t.tags[app.tag]) gaps.push(`strings.${locale}.tags.${app.tag}`);
+    }
+  }
+
+  if (gaps.length) {
+    console.error(`Contenu manquant :\n  - ${[...new Set(gaps)].join("\n  - ")}`);
+    process.exit(1);
+  }
+};
+
 const run = async () => {
+  checkContent();
   const written = [];
 
   for (const locale of LOCALES) {

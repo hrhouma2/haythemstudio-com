@@ -40,28 +40,7 @@ jobs:
           fi
 
       - name: Check required pages
-        run: |
-          set -euo pipefail
-          for locale in "" fr ar es pt
-          do
-            prefix="${locale:+$locale/}"
-            for path in \
-              "${prefix}index.html" \
-              "${prefix}privacy/index.html" \
-              "${prefix}privacy/motsmeles/index.html" \
-              "${prefix}privacy/parkingpuzzle/index.html" \
-              "${prefix}privacy/qiblafr/index.html" \
-              "${prefix}privacy/arcadelab/index.html" \
-              "${prefix}privacy/onelinepuzzle/index.html"
-            do
-              test -f "$path" || { echo "Missing $path"; exit 1; }
-            done
-          done
-          for path in assets/styles.css assets/main.js assets/jellyfish.js assets/favicon.svg sitemap.xml robots.txt
-          do
-            test -f "$path" || { echo "Missing $path"; exit 1; }
-          done
-          echo "All required pages present."
+        run: node check.mjs
 
   deploy:
     name: Deploy Vercel
