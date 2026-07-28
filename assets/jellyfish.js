@@ -40,16 +40,40 @@
 
     vec3 bellPos(float u, float v) {
       float c = bellPulse(u);
-      float lobes = 1.0 + 0.045 * sin(v * 50.2655);
+      float lobes = 1.0 + 0.022 * sin(v * 75.398);
       float flare = 1.0 + 0.16 * smoothstep(0.72, 1.0, u);
-      float r = pow(sin(u * 1.5708), 0.6) * flare * lobes * (1.0 - 0.19 * c * u);
-      float y = pow(cos(u * 1.5708), 1.3) * 0.66 * (1.0 + 0.2 * c * u) - 0.12 * c;
+      // max() obligatoire : cos(PI/2) tombe legerement sous zero et pow() renverrait NaN.
+      float r = pow(max(sin(u * 1.5708), 0.0), 0.6) * flare * lobes * (1.0 - 0.19 * c * u);
+      float y = pow(max(cos(u * 1.5708), 0.0), 1.3) * 0.66 * (1.0 + 0.2 * c * u) - 0.12 * c;
       float a = v * 6.28318;
       return vec3(r * cos(a), y, r * sin(a));
     }
 
     float hash11(float p) {
       return fract(sin(p * 127.1) * 43758.5453);
+    }
+
+    // La face arriere doit s'effacer, sinon l'animal se lit comme une cage en fil de fer.
+    // Les seuils encadrent la distance camera fixee dans draw().
+    float depthFade(float viewZ) {
+      return mix(0.24, 1.0, smoothstep(5.7, 3.1, -viewZ));
+    }
+
+    vec3 tentaclePos(float id, float s) {
+      float seed = hash11(id * 12.9898);
+      vec3 rim = bellPos(1.0, id);
+      float c = bellPulse(1.0);
+      float len = 1.7 + 1.5 * seed;
+      float sway = sin(uTime * 1.25 - s * 4.6 + id * 24.0);
+      float curl = sin(uTime * 0.7 - s * 9.2 + seed * 30.0);
+      float swirl = cos(uTime * 0.85 - s * 3.1 + id * 13.0);
+      float whip = s * s * (1.25 - 0.45 * s);
+
+      vec3 p = rim;
+      p.y -= len * s * (0.86 + 0.14 * c);
+      p.x += rim.x * (0.3 * s - 0.42 * s * s) + (0.4 * sway + 0.16 * curl) * whip * (1.0 + 0.35 * c);
+      p.z += rim.z * (0.3 * s - 0.42 * s * s) + (0.36 * swirl + 0.14 * curl) * whip * (1.0 + 0.35 * c);
+      return p;
     }
   `;
 
@@ -60,6 +84,7 @@
     uniform mat4 uView;
     varying float vFres;
     varying float vU;
+    varying float vDepth;
     ${BODY}
     void main() {
       float u = aUV.x;
@@ -75,6 +100,7 @@
 
       vFres = pow(1.0 - abs(dot(nv, eye)), 2.1);
       vU = u;
+      vDepth = depthFade(mv.z);
       gl_Position = uProj * mv;
     }
   `;
@@ -83,53 +109,70 @@
     precision mediump float;
     varying float vFres;
     varying float vU;
+    varying float vDepth;
     uniform float uAlpha;
     uniform float uCore;
+    uniform float uInk;
     void main() {
       vec3 crown = vec3(0.32, 0.83, 0.98);
       vec3 skirt = vec3(0.24, 0.86, 0.59);
-      vec3 col = mix(crown, skirt, smoothstep(0.1, 1.0, vU));
-      float a = (uCore + vFres * 0.7) * (1.0 - 0.3 * vU) * uAlpha;
-      gl_FragColor = vec4(col * (0.45 + vFres * 1.1), a);
+      vec3 col = mix(crown, skirt, smoothstep(0.1, 1.0, vU)) * (0.45 + vFres * 1.1);
+      float a = (uCore + vFres * 0.7) * (1.0 - 0.3 * vU) * uAlpha * vDepth;
+      col = mix(col, vec3(0.04, 0.27, 0.21), uInk);
+      a = mix(a, min(a * 2.4, 1.0), uInk);
+      gl_FragColor = vec4(col, a);
     }
   `;
 
+  // Les tentacules sont des rubans elargis en espace ecran : gl.lineWidth est
+  // plafonne a 1 pixel dans la plupart des navigateurs.
   const TENTACLE_VS = `
     precision mediump float;
-    attribute vec2 aTen;
+    attribute vec3 aTen;
     uniform mat4 uProj;
     uniform mat4 uView;
+    uniform float uAspect;
     varying float vFade;
+    varying float vSide;
     ${BODY}
     void main() {
       float id = aTen.x;
       float s = aTen.y;
-      float seed = hash11(id * 12.9898);
-      vec3 rim = bellPos(1.0, id);
-      float c = bellPulse(1.0);
+      float side = aTen.z;
 
-      float len = 1.7 + 1.5 * seed;
-      float sway = sin(uTime * 1.25 - s * 4.6 + id * 24.0);
-      float swirl = cos(uTime * 0.85 - s * 3.1 + id * 13.0);
+      vec3 p0 = tentaclePos(id, s);
+      vec3 p1 = tentaclePos(id, min(s + 0.03, 1.0));
 
-      vec3 p = rim;
-      p.y -= len * s * (0.86 + 0.14 * c);
-      p.x += rim.x * (0.3 * s - 0.42 * s * s) + (0.38 * sway + 0.12 * swirl) * s * s * (1.0 + 0.35 * c);
-      p.z += rim.z * (0.3 * s - 0.42 * s * s) + (0.34 * swirl) * s * s * (1.0 + 0.35 * c);
+      vec4 mv = uView * vec4(p0, 1.0);
+      vec4 c0 = uProj * mv;
+      vec4 c1 = uProj * uView * vec4(p1, 1.0);
+
+      vec2 d = c1.xy / c1.w - c0.xy / c0.w;
+      d.x *= uAspect;
+      d = normalize(d + vec2(0.0001));
+      vec2 n = vec2(-d.y, d.x) * (0.016 - 0.009 * s) * side;
+      n.x /= uAspect;
 
       float shimmer = 0.55 + 0.45 * sin(uTime * 2.6 - s * 9.0 + id * 18.0);
-      vFade = pow(1.0 - s, 1.15) * (0.45 + 0.55 * shimmer);
-      gl_Position = uProj * uView * vec4(p, 1.0);
+      vFade = pow(1.0 - s, 1.1) * (0.45 + 0.55 * shimmer) * depthFade(mv.z);
+      vSide = side;
+
+      gl_Position = vec4(c0.xy / c0.w + n, c0.z / c0.w, 1.0);
     }
   `;
 
   const TENTACLE_FS = `
     precision mediump float;
     varying float vFade;
+    varying float vSide;
     uniform float uAlpha;
     uniform vec3 uColor;
+    uniform float uInk;
     void main() {
-      gl_FragColor = vec4(1.0, 0.2, 0.2, 1.0);
+      float core = 1.0 - vSide * vSide;
+      vec3 col = mix(uColor * (0.55 + vFade * 0.8), vec3(0.05, 0.31, 0.25), uInk);
+      float a = vFade * core * uAlpha;
+      gl_FragColor = vec4(col, mix(a, min(a * 2.2, 1.0), uInk));
     }
   `;
 
@@ -162,19 +205,52 @@
       p.x += -sin(a) * side * width;
       p.z += cos(a) * side * width;
 
-      vFade = pow(1.0 - s, 0.9);
+      vec4 mv = uView * vec4(p, 1.0);
+      vFade = pow(1.0 - s, 0.9) * depthFade(mv.z);
       vSide = abs(side);
-      gl_Position = uProj * uView * vec4(p, 1.0);
+      gl_Position = uProj * mv;
     }
   `;
 
   const ARM_FS = `
     precision mediump float;
     varying float vFade;
+    varying float vSide;
     uniform float uAlpha;
+    uniform float uInk;
     void main() {
-      vec3 col = mix(vec3(0.96, 0.77, 0.42), vec3(0.24, 0.86, 0.59), 0.45);
-      gl_FragColor = vec4(col * (0.5 + vFade), vFade * uAlpha);
+      vec3 col = mix(vec3(0.96, 0.77, 0.42), vec3(0.24, 0.86, 0.59), 0.45) * (0.5 + vFade);
+      float core = 1.0 - vSide * vSide * 0.85;
+      float a = vFade * core * uAlpha;
+      col = mix(col, vec3(0.42, 0.3, 0.09), uInk);
+      gl_FragColor = vec4(col, mix(a, min(a * 2.0, 1.0), uInk));
+    }
+  `;
+
+  // Halo volumetrique : un quad plein ecran module par la pulsation de la cloche.
+  const HALO_VS = `
+    precision mediump float;
+    attribute vec2 aQuad;
+    varying vec2 vPos;
+    void main() {
+      vPos = aQuad;
+      gl_Position = vec4(aQuad, 0.0, 1.0);
+    }
+  `;
+
+  const HALO_FS = `
+    precision mediump float;
+    varying vec2 vPos;
+    uniform float uTime;
+    uniform float uAlpha;
+    uniform float uAspect;
+    void main() {
+      vec2 p = vec2(vPos.x * uAspect, vPos.y - 0.34);
+      float d = length(p * vec2(0.78, 1.0));
+      float pulse = 0.5 + 0.5 * sin(uTime * 1.55 - 2.3);
+      float halo = smoothstep(0.78 + 0.06 * pulse, 0.0, d);
+      vec3 col = mix(vec3(0.24, 0.86, 0.59), vec3(0.3, 0.78, 0.98), 0.35);
+      gl_FragColor = vec4(col, halo * halo * uAlpha * (0.75 + 0.25 * pulse));
     }
   `;
 
@@ -184,6 +260,7 @@
     uniform mat4 uProj;
     uniform mat4 uView;
     uniform float uPixel;
+    uniform float uInk;
     varying float vTwinkle;
     ${BODY}
     void main() {
@@ -198,7 +275,7 @@
 
       vec4 mv = uView * vec4(p, 1.0);
       vTwinkle = 0.35 + 0.65 * (0.5 + 0.5 * sin(uTime * 1.6 + h1 * 30.0));
-      gl_PointSize = (0.6 + 1.7 * h2) * uPixel / max(-mv.z, 0.6);
+      gl_PointSize = (0.6 + 1.7 * h2) * uPixel * mix(1.0, 0.55, uInk) / max(-mv.z, 0.6);
       gl_Position = uProj * mv;
     }
   `;
@@ -207,10 +284,12 @@
     precision mediump float;
     varying float vTwinkle;
     uniform float uAlpha;
+    uniform float uInk;
     void main() {
       float d = length(gl_PointCoord - 0.5);
       float mask = smoothstep(0.5, 0.05, d);
-      gl_FragColor = vec4(vec3(0.55, 0.95, 0.85) * mask, mask * vTwinkle * uAlpha);
+      vec3 col = mix(vec3(0.55, 0.95, 0.85) * mask, vec3(0.09, 0.36, 0.29), uInk);
+      gl_FragColor = vec4(col, mask * vTwinkle * uAlpha * mix(1.0, 0.22, uInk));
     }
   `;
 
@@ -290,10 +369,13 @@
   const tenData = [];
   const tenIdx = [];
   for (let t = 0; t < TENTACLES; t++) {
-    const base = t * (TENT_STEPS + 1);
+    const base = t * (TENT_STEPS + 1) * 2;
     for (let s = 0; s <= TENT_STEPS; s++) {
-      tenData.push(t / TENTACLES, s / TENT_STEPS);
-      if (s < TENT_STEPS) tenIdx.push(base + s, base + s + 1);
+      tenData.push(t / TENTACLES, s / TENT_STEPS, -1, t / TENTACLES, s / TENT_STEPS, 1);
+      if (s < TENT_STEPS) {
+        const q = base + s * 2;
+        tenIdx.push(q, q + 1, q + 2, q + 1, q + 3, q + 2);
+      }
     }
   }
 
@@ -322,13 +404,15 @@
   const armVBO = buffer(new Float32Array(armData));
   const armIBO = buffer(new Uint16Array(armIdx), gl.ELEMENT_ARRAY_BUFFER);
   const dustVBO = buffer(new Float32Array(dustData));
+  const haloVBO = buffer(new Float32Array([-1, -1, 3, -1, -1, 3]));
 
-  const bellProg = program(BELL_VS, BELL_FS, ["aUV"], ["uProj", "uView", "uTime", "uAlpha", "uCore"]);
-  const tenProg = program(TENTACLE_VS, TENTACLE_FS, ["aTen"], ["uProj", "uView", "uTime", "uAlpha", "uColor"]);
-  const armProg = program(ARM_VS, ARM_FS, ["aArm"], ["uProj", "uView", "uTime", "uAlpha"]);
-  const dustProg = program(DUST_VS, DUST_FS, ["aSeed"], ["uProj", "uView", "uTime", "uAlpha", "uPixel"]);
+  const bellProg = program(BELL_VS, BELL_FS, ["aUV"], ["uProj", "uView", "uTime", "uAlpha", "uCore", "uInk"]);
+  const tenProg = program(TENTACLE_VS, TENTACLE_FS, ["aTen"], ["uProj", "uView", "uTime", "uAlpha", "uColor", "uAspect", "uInk"]);
+  const armProg = program(ARM_VS, ARM_FS, ["aArm"], ["uProj", "uView", "uTime", "uAlpha", "uInk"]);
+  const dustProg = program(DUST_VS, DUST_FS, ["aSeed"], ["uProj", "uView", "uTime", "uAlpha", "uPixel", "uInk"]);
+  const haloProg = program(HALO_VS, HALO_FS, ["aQuad"], ["uTime", "uAlpha", "uAspect"]);
 
-  if (!bellProg || !tenProg || !armProg || !dustProg) {
+  if (!bellProg || !tenProg || !armProg || !dustProg || !haloProg) {
     stage.classList.add("is-static");
     return;
   }
@@ -377,6 +461,7 @@
   let width = 0;
   let height = 0;
   let pixelRatio = 1;
+  let aspect = 1;
   let proj = perspective(0.95, 1, 0.1, 40);
 
   const resize = () => {
@@ -385,12 +470,20 @@
     pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
     width = Math.round(rect.width * pixelRatio);
     height = Math.round(rect.height * pixelRatio);
+    aspect = rect.width / rect.height;
     if (canvas.width === width && canvas.height === height) return;
     canvas.width = width;
     canvas.height = height;
     gl.viewport(0, 0, width, height);
-    proj = perspective(0.95, rect.width / rect.height, 0.1, 40);
+    proj = perspective(0.95, aspect, 0.1, 40);
   };
+
+  // Le rendu additif ne se voit pas sur un fond clair : le theme clair bascule
+  // sur un trace a l'encre en alpha classique.
+  let ink = document.documentElement.dataset.theme === "light" ? 1 : 0;
+  new MutationObserver(() => {
+    ink = document.documentElement.dataset.theme === "light" ? 1 : 0;
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
   const hero = canvas.closest(".hero") || document.body;
@@ -422,14 +515,26 @@
     const bob = Math.sin(time * 0.62) * 0.16;
 
     const view = multiply(
-      translate(-drift * 0.35, 0.78 - bob, -4.05),
-      multiply(rotateX(0.32 + pointer.y), rotateY(time * 0.06 + pointer.x))
+      translate(-drift * 0.35, 0.72 - bob, -3.72),
+      multiply(rotateX(0.22 + pointer.y), rotateY(time * 0.06 + pointer.x))
     );
 
     gl.clearColor(0, 0, 0, 0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+    gl.blendFunc(gl.SRC_ALPHA, ink ? gl.ONE_MINUS_SRC_ALPHA : gl.ONE);
+
+    // Glow that breathes with the bell, meaningless on a light background.
+    if (!ink) {
+      gl.useProgram(haloProg.prog);
+      gl.uniform1f(haloProg.u.uTime, time);
+      gl.uniform1f(haloProg.u.uAlpha, 0.16);
+      gl.uniform1f(haloProg.u.uAspect, aspect);
+      gl.bindBuffer(gl.ARRAY_BUFFER, haloVBO);
+      gl.enableVertexAttribArray(haloProg.a.aQuad);
+      gl.vertexAttribPointer(haloProg.a.aQuad, 2, gl.FLOAT, false, 0, 0);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
 
     // Plankton, far behind the animal.
     gl.useProgram(dustProg.prog);
@@ -437,6 +542,7 @@
     gl.uniformMatrix4fv(dustProg.u.uView, false, view);
     gl.uniform1f(dustProg.u.uTime, time);
     gl.uniform1f(dustProg.u.uAlpha, 0.75);
+    gl.uniform1f(dustProg.u.uInk, ink);
     gl.uniform1f(dustProg.u.uPixel, 90 * pixelRatio);
     gl.bindBuffer(gl.ARRAY_BUFFER, dustVBO);
     gl.enableVertexAttribArray(dustProg.a.aSeed);
@@ -448,21 +554,15 @@
     gl.uniformMatrix4fv(tenProg.u.uProj, false, proj);
     gl.uniformMatrix4fv(tenProg.u.uView, false, view);
     gl.uniform1f(tenProg.u.uTime, time);
-    gl.uniform1f(tenProg.u.uAlpha, 0.9);
+    gl.uniform1f(tenProg.u.uAlpha, 0.62);
+    gl.uniform1f(tenProg.u.uAspect, aspect);
+    gl.uniform1f(tenProg.u.uInk, ink);
     gl.uniform3f(tenProg.u.uColor, 0.3, 0.86, 0.72);
     gl.bindBuffer(gl.ARRAY_BUFFER, tenVBO);
     gl.enableVertexAttribArray(tenProg.a.aTen);
-    gl.vertexAttribPointer(tenProg.a.aTen, 2, gl.FLOAT, false, 0, 0);
+    gl.vertexAttribPointer(tenProg.a.aTen, 3, gl.FLOAT, false, 0, 0);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tenIBO);
-    gl.drawElements(gl.LINES, tenIdx.length, gl.UNSIGNED_SHORT, 0);
-    if (!window.__jellyDebug) {
-      window.__jellyDebug = {
-        aTen: tenProg.a.aTen,
-        uColor: String(tenProg.u.uColor),
-        count: tenIdx.length,
-        err: gl.getError(),
-      };
-    }
+    gl.drawElements(gl.TRIANGLES, tenIdx.length, gl.UNSIGNED_SHORT, 0);
 
     // Oral arms.
     gl.useProgram(armProg.prog);
@@ -470,6 +570,7 @@
     gl.uniformMatrix4fv(armProg.u.uView, false, view);
     gl.uniform1f(armProg.u.uTime, time);
     gl.uniform1f(armProg.u.uAlpha, 0.5);
+    gl.uniform1f(armProg.u.uInk, ink);
     gl.bindBuffer(gl.ARRAY_BUFFER, armVBO);
     gl.enableVertexAttribArray(armProg.a.aArm);
     gl.vertexAttribPointer(armProg.a.aArm, 3, gl.FLOAT, false, 0, 0);
@@ -481,22 +582,23 @@
     gl.uniformMatrix4fv(bellProg.u.uProj, false, proj);
     gl.uniformMatrix4fv(bellProg.u.uView, false, view);
     gl.uniform1f(bellProg.u.uTime, time);
+    gl.uniform1f(bellProg.u.uInk, ink);
     gl.bindBuffer(gl.ARRAY_BUFFER, bellVBO);
     gl.enableVertexAttribArray(bellProg.a.aUV);
     gl.vertexAttribPointer(bellProg.a.aUV, 2, gl.FLOAT, false, 0, 0);
 
-    gl.uniform1f(bellProg.u.uAlpha, 0.55);
-    gl.uniform1f(bellProg.u.uCore, 0.16);
+    gl.uniform1f(bellProg.u.uAlpha, 0.85);
+    gl.uniform1f(bellProg.u.uCore, 0.2);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, bellIBO);
     gl.drawElements(gl.TRIANGLES, bellIdx.length, gl.UNSIGNED_SHORT, 0);
 
-    gl.uniform1f(bellProg.u.uAlpha, 0.6);
-    gl.uniform1f(bellProg.u.uCore, 0.3);
+    gl.uniform1f(bellProg.u.uAlpha, 0.72);
+    gl.uniform1f(bellProg.u.uCore, 0.34);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ribIBO);
     gl.drawElements(gl.LINES, ribIdx.length, gl.UNSIGNED_SHORT, 0);
 
-    gl.uniform1f(bellProg.u.uAlpha, 1);
-    gl.uniform1f(bellProg.u.uCore, 0.9);
+    gl.uniform1f(bellProg.u.uAlpha, 0.7);
+    gl.uniform1f(bellProg.u.uCore, 0.5);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, rimIBO);
     gl.drawElements(gl.LINES, rimIdx.length, gl.UNSIGNED_SHORT, 0);
   };

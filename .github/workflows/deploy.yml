@@ -57,7 +57,7 @@ jobs:
               test -f "$path" || { echo "Missing $path"; exit 1; }
             done
           done
-          for path in assets/styles.css assets/main.js assets/favicon.svg sitemap.xml robots.txt
+          for path in assets/styles.css assets/main.js assets/jellyfish.js assets/favicon.svg sitemap.xml robots.txt
           do
             test -f "$path" || { echo "Missing $path"; exit 1; }
           done

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haythem Studio — Android apps by GNeurone AI</title>
-  <meta name="description" content="Five offline Android applications published by GNeurone AI: puzzles, word search and a Qibla compass. No ads, no account, no in-app purchases.">
+  <title>Haythem Studio — Android games and tools that work offline</title>
+  <meta name="description" content="Five Android apps by GNeurone AI: a parking puzzle, one-line drawing, fifteen arcade classics, an Arabic word search and a Qibla compass. They open in a second and keep working without a signal.">
   <meta name="theme-color" content="#070b0a">
   <link rel="canonical" href="https://haythemstudio.com/">
   <link rel="alternate" hreflang="en" href="https://haythemstudio.com/">
@@ -15,8 +15,8 @@
   <link rel="alternate" hreflang="x-default" href="https://haythemstudio.com/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Haythem Studio — Android apps by GNeurone AI">
-  <meta property="og:description" content="Five offline Android applications: no ads, no account, no in-app purchases.">
+  <meta property="og:title" content="Haythem Studio — Android games and tools that work offline">
+  <meta property="og:description" content="Five Android apps that open in a second and keep working without a signal.">
   <meta property="og:url" content="https://haythemstudio.com/">
   <meta property="og:locale" content="en">
   <meta name="twitter:card" content="summary_large_image">
@@ -67,18 +67,20 @@
         <span class="brand-word">Haythem <span>Studio</span></span>
       </a>
       <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="#apps">Applications</a></li>
-          <li><a href="#principes">Principles</a></li>
-          <li class="nav-key"><a href="/privacy/">Privacy</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-panel" id="site-menu">
+          <ul class="nav-links">
+            <li><a href="#apps">Applications</a></li>
+            <li><a href="#principes">Principles</a></li>
+            <li class="nav-key"><a href="/privacy/">Privacy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         <div class="lang-switch" role="group" aria-label="Language">
           <a href="/" lang="en" hreflang="en" aria-current="true" title="English">EN</a>
           <a href="/fr/" lang="fr" hreflang="fr" title="Français">FR</a>
           <a href="/ar/" lang="ar" hreflang="ar" title="العربية">AR</a>
           <a href="/es/" lang="es" hreflang="es" title="Español">ES</a>
           <a href="/pt/" lang="pt" hreflang="pt" title="Português">PT</a>
+        </div>
         </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -89,6 +91,9 @@
             <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
           </svg>
         </button>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-label-open="Menu" data-label-close="Close the menu">
+          <span class="nav-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -96,29 +101,29 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="badge"><span class="dot" aria-hidden="true"></span> Five applications on Google Play</span>
+        <span class="badge"><span class="dot" aria-hidden="true"></span> Five apps live on Google Play</span>
         <h1>
-          <span class="line"><span>No account.</span></span>
-          <span class="line"><span>No ads.</span></span>
-          <span class="line"><span class="gradient-text">No compromise.</span></span>
+          <span class="line"><span>Games that</span></span>
+          <span class="line"><span>just work,</span></span>
+          <span class="line"><span class="gradient-text">even offline.</span></span>
         </h1>
-        <p class="hero-lede">Haythem Studio builds Android games and utilities that run offline. Five applications published by GNeurone AI, with no data collection and no in-app purchases.</p>
+        <p class="hero-lede">Haythem Studio makes Android apps that open in a second and keep going without a signal. Four puzzle games and a Qibla compass, published by GNeurone AI and fully unlocked from the first launch.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#apps">Explore the applications <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-ghost" href="/privacy/">Privacy policies</a>
+          <a class="btn btn-primary" href="#apps">Browse the apps <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="/privacy/">Our privacy promise</a>
         </div>
         <div class="stats">
           <div class="stat">
             <div class="num" data-count="5">5</div>
-            <div class="label">Published applications</div>
+            <div class="label">Apps on Google Play</div>
           </div>
           <div class="stat">
-            <div class="num" data-count="0">0</div>
-            <div class="label">Trackers or ads</div>
+            <div class="num" data-count="120" data-suffix="+">120+</div>
+            <div class="label">Levels and puzzles</div>
           </div>
           <div class="stat">
             <div class="num" data-count="100" data-suffix="%">100%</div>
-            <div class="label">Computed offline</div>
+            <div class="label">Computed on your phone</div>
           </div>
         </div>
       </div>
@@ -126,11 +131,11 @@
       <div class="hero-visual">
         <div class="floating-chip chip-1">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-          Zero collection
+          Your data stays here
         </div>
         <div class="floating-chip chip-2">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-          Works without a network
+          Plays in airplane mode
         </div>
 
         <div class="jellyfish-stage">
@@ -143,8 +148,8 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Offline</span><span>No advertising</span><span>No account</span><span>No in-app purchase</span><span>No tracker</span><span>Published by GNeurone AI</span>
-      <span>Offline</span><span>No advertising</span><span>No account</span><span>No in-app purchase</span><span>No tracker</span><span>Published by GNeurone AI</span>
+      <span>Opens instantly</span><span>Plays offline</span><span>Private by design</span><span>Fully unlocked</span><span>Arabic · French · English</span><span>Published by GNeurone AI</span>
+      <span>Opens instantly</span><span>Plays offline</span><span>Private by design</span><span>Fully unlocked</span><span>Arabic · French · English</span><span>Published by GNeurone AI</span>
     </div>
   </div>
 
@@ -153,8 +158,8 @@
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">The catalogue</p>
-          <h2>Five applications, one promise</h2>
-          <p>Every title is published under the GNeurone AI account and runs entirely on the device, with no network request.</p>
+          <h2>Pick your next puzzle</h2>
+          <p>Four games and one everyday companion. Each one is published under the GNeurone AI account and runs entirely on your device.</p>
         </div>
 
         <div class="bento">
@@ -194,7 +199,7 @@
             </div>
             <div class="card-body">
               <h3>Boussole Qibla <span class="tag">Lifestyle</span></h3>
-              <p>Qibla direction computed along the great circle, prayer times derived from the position of the sun and a Hijri calendar — all without a single network request.</p>
+              <p>Point your phone and find the Qibla, computed along the great circle. Prayer times follow the sun at your exact position, and the Hijri calendar comes along — in the desert as on a plane.</p>
             </div>
             <div class="card-foot">
               <span class="pkg">com.haythemstudio.qiblafr</span>
@@ -219,7 +224,7 @@
             </div>
             <div class="card-body">
               <h3>صيد الكلمات — Word Hunt <span class="tag">Words</span></h3>
-              <p>Word search grids designed for the Arabic alphabet, with six themes and a fresh grid generated for every game.</p>
+              <p>Word search grids built for the Arabic alphabet, with six themes and a brand-new grid every single game. You will never play the same board twice.</p>
             </div>
             <div class="card-foot">
               <span class="pkg">com.haythemstudio.motsmeles</span>
@@ -242,7 +247,7 @@
             </div>
             <div class="card-body">
               <h3>Parking Puzzle <span class="tag">Puzzle</span></h3>
-              <p>Sixty unblocking levels solved by computer before shipping: the optimal move count is known for each one.</p>
+              <p>Sixty levels of gridlock to untangle. Each one was solved by computer before shipping, so the optimal move count is known — beat it if you can.</p>
             </div>
             <div class="card-foot">
               <span class="pkg">com.haythemstudio.parkingpuzzle</span>
@@ -269,7 +274,7 @@
             </div>
             <div class="card-body">
               <h3>Puzzle Arcade <span class="tag">Collection</span></h3>
-              <p>Fifteen classic puzzles gathered in a single application: bottle sort, 2048, sliding puzzle, Hanoi, snake and more.</p>
+              <p>Fifteen classics in one app: bottle sort, 2048, sliding puzzle, Hanoi, snake and ten more. One icon on your home screen, an evening of games behind it.</p>
             </div>
             <div class="card-foot">
               <span class="pkg">com.haythemstudio.arcadelab</span>
@@ -289,7 +294,7 @@
             </div>
             <div class="card-body">
               <h3>One Line Puzzle <span class="tag">Minimal</span></h3>
-              <p>Forty-five shapes to draw in a single stroke, all verified as solvable before publication. No text, no language required.</p>
+              <p>Forty-five shapes to draw without lifting your finger, each verified as solvable before publication. Not a word of text, so it plays in any language.</p>
             </div>
             <div class="card-foot">
               <span class="pkg">com.haythemstudio.onelinepuzzle</span>
@@ -303,31 +308,31 @@
     <section class="section" id="principes">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">Principles</p>
-          <h2>What you will not find here</h2>
-          <p>These rules are not configuration options: they are written into the code shipped on Google Play.</p>
+          <p class="eyebrow">How they are built</p>
+          <h2>Made to stay on your phone</h2>
+          <p>Four commitments written into the code shipped on Google Play, not options buried in a settings screen.</p>
         </div>
 
         <div class="principles">
           <div class="principle reveal">
             <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <strong>No personal data</strong>
-            <p>Nothing is sent to GNeurone AI. Progress and preferences stay in the private space of the application, on your phone.</p>
+            <strong>Everything stays with you</strong>
+            <p>Scores, settings and progress live in the private storage of the app. Nothing travels to GNeurone AI, so there is nothing to leak.</p>
           </div>
           <div class="principle reveal" data-delay="1">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <strong>No advertising</strong>
-            <p>No banner, no interstitial, no advertising identifier read, no ad network SDK embedded.</p>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
+            <strong>Straight into the game</strong>
+            <p>Tap the icon and you are playing. Nothing interrupts a level, nothing loads between you and the next move.</p>
           </div>
           <div class="principle reveal" data-delay="2">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M2.5 10h19"/></svg></div>
-            <strong>No in-app purchase</strong>
-            <p>Every feature is available without paying. No subscription, no virtual currency, no paid unlock.</p>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10.5" rx="2.5"/><path d="M7.5 11V7a4.5 4.5 0 0 1 8.7-1.6"/></svg></div>
+            <strong>The whole app, right away</strong>
+            <p>Every level, every theme and every feature is unlocked from the first launch, on every device you install it on.</p>
           </div>
           <div class="principle reveal" data-delay="3">
-            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></div>
-            <strong>Everything computed offline</strong>
-            <p>Qibla, prayer times, grids and levels are generated on the device. The applications stay usable in airplane mode.</p>
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
+            <strong>Works in airplane mode</strong>
+            <p>Qibla direction, prayer times, grids and levels are computed on the device. A plane, a metro or a dead zone changes nothing.</p>
           </div>
         </div>
       </div>
@@ -337,8 +342,8 @@
       <div class="wrap">
         <div class="contact-band reveal">
           <div>
-            <h2>A question about your data?</h2>
-            <p>GNeurone AI answers directly at the address declared on every privacy policy.</p>
+            <h2>Talk to the studio</h2>
+            <p>Bug reports, ideas and questions go straight to GNeurone AI, at the address published on every privacy policy.</p>
             <p><a class="mail" href="mailto:rehoumahaythem@gmail.com">rehoumahaythem@gmail.com</a></p>
           </div>
           <a class="btn btn-primary" href="mailto:rehoumahaythem@gmail.com">

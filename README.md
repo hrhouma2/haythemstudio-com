@@ -23,6 +23,25 @@ Fichiers de marque :
 Le signe est repris en SVG inline dans la navigation (`brandLogo` dans `build.mjs`) :
 toute modification du dessin doit être reportée dans ces quatre endroits.
 
+## La méduse du hero
+
+`assets/jellyfish.js` dessine la méduse en WebGL brut, sans aucune bibliothèque
+(≈ 17 ko, chargé uniquement sur les pages d'accueil).
+
+Toutes les positions sont calculées dans le vertex shader à partir de coordonnées
+`(u, v)` : les tampons sont envoyés une seule fois au démarrage et une image ne
+coûte que sept appels de dessin, sans aucun calcul JavaScript par image.
+
+Garde-fous :
+
+| Situation | Comportement |
+|-----------|--------------|
+| Pas de WebGL | Le canvas reste vide, un halo CSS prend le relais |
+| `prefers-reduced-motion` | Une seule image est rendue, sans boucle |
+| Hero hors écran ou onglet caché | La boucle est arrêtée |
+| Écran haute densité | Ratio de pixels plafonné à 2 |
+| Thème clair | Bascule en tracé à l'encre (alpha classique) : l'additif est invisible sur fond clair |
+
 Pages générées (à committer, Vercel sert du statique) :
 
 - `/` et `/<langue>/` — accueil

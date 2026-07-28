@@ -45,6 +45,43 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---------- Sandwich menu ---------- */
+
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const navPanel = document.getElementById("site-menu");
+  if (navToggle && navPanel) {
+    const setMenu = (open) => {
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? navToggle.dataset.labelClose : navToggle.dataset.labelOpen);
+      navPanel.classList.toggle("is-open", open);
+    };
+
+    const isOpen = () => navToggle.getAttribute("aria-expanded") === "true";
+
+    navToggle.addEventListener("click", () => setMenu(!isOpen()));
+
+    navPanel.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setMenu(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (isOpen() && !event.target.closest(".site-nav")) setMenu(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !isOpen()) return;
+      setMenu(false);
+      navToggle.focus();
+    });
+
+    // Repasser en mode bureau avec le menu ouvert laisserait un etat incoherent.
+    const wide = window.matchMedia("(min-width: 861px)");
+    const onWide = (event) => {
+      if (event.matches) setMenu(false);
+    };
+    wide.addEventListener ? wide.addEventListener("change", onWide) : wide.addListener(onWide);
+  }
+
   /* ---------- Scroll reveal ---------- */
 
   const reveals = document.querySelectorAll(".reveal");

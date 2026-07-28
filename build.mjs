@@ -21,7 +21,6 @@ import {
   apps,
   cardArt,
   localeMeta,
-  phoneSlides,
 } from "./content/apps.mjs";
 import { strings } from "./content/strings.mjs";
 
@@ -80,6 +79,11 @@ const themeButton = (locale) => `        <button class="theme-toggle" type="butt
           </svg>
         </button>`;
 
+/** Sandwich button: only shown below the navigation breakpoint. */
+const menuButton = (locale) => `        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="${strings[locale].nav.menu}" data-label-open="${strings[locale].nav.menu}" data-label-close="${strings[locale].nav.menuClose}">
+          <span class="nav-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>`;
+
 /** Monogram: the left stem is solid, the right one is built from three puzzle blocks. */
 const brandLogo = `<span class="brand-logo" aria-hidden="true">
           <svg viewBox="0 0 48 48" width="34" height="34">
@@ -124,14 +128,17 @@ const nav = (locale, rest, { onHome = false } = {}) => {
         <span class="brand-word">Haythem <span>Studio</span></span>
       </a>
       <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="${anchor("apps")}">${t.apps}</a></li>
-          <li><a href="${anchor("principes")}">${t.principles}</a></li>
-          <li class="nav-key"><a href="${path(locale, "/privacy/")}">${t.privacy}</a></li>
-          <li><a href="${anchor("contact")}">${t.contact}</a></li>
-        </ul>
+        <div class="nav-panel" id="site-menu">
+          <ul class="nav-links">
+            <li><a href="${anchor("apps")}">${t.apps}</a></li>
+            <li><a href="${anchor("principes")}">${t.principles}</a></li>
+            <li class="nav-key"><a href="${path(locale, "/privacy/")}">${t.privacy}</a></li>
+            <li><a href="${anchor("contact")}">${t.contact}</a></li>
+          </ul>
 ${langSwitch(locale, rest)}
+        </div>
 ${themeButton(locale)}
+${menuButton(locale)}
       </div>
     </div>
   </nav>`;
@@ -216,8 +223,8 @@ const homeBody = (locale) => {
             <div class="label">${t.hero.statApps}</div>
           </div>
           <div class="stat">
-            <div class="num" data-count="0">0</div>
-            <div class="label">${t.hero.statTrackers}</div>
+            <div class="num" data-count="120" data-suffix="+">120+</div>
+            <div class="label">${t.hero.statLevels}</div>
           </div>
           <div class="stat">
             <div class="num" data-count="100" data-suffix="%">100%</div>
@@ -310,9 +317,9 @@ ${footer(locale)}`;
 
 const principleIcons = [
   `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>`,
-  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>`,
-  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M2.5 10h19"/></svg>`,
-  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/></svg>`,
+  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>`,
+  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10.5" rx="2.5"/><path d="M7.5 11V7a4.5 4.5 0 0 1 8.7-1.6"/></svg>`,
+  `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>`,
 ];
 
 const privacyIndexBody = (locale) => {

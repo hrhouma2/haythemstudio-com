@@ -67,18 +67,20 @@
         <span class="brand-word">Haythem <span>Studio</span></span>
       </a>
       <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="/#apps">Applications</a></li>
-          <li><a href="/#principes">Principles</a></li>
-          <li class="nav-key"><a href="/privacy/">Privacy</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
+        <div class="nav-panel" id="site-menu">
+          <ul class="nav-links">
+            <li><a href="/#apps">Applications</a></li>
+            <li><a href="/#principes">Principles</a></li>
+            <li class="nav-key"><a href="/privacy/">Privacy</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
         <div class="lang-switch" role="group" aria-label="Language">
           <a href="/privacy/motsmeles/" lang="en" hreflang="en" aria-current="true" title="English">EN</a>
           <a href="/fr/privacy/motsmeles/" lang="fr" hreflang="fr" title="Français">FR</a>
           <a href="/ar/privacy/motsmeles/" lang="ar" hreflang="ar" title="العربية">AR</a>
           <a href="/es/privacy/motsmeles/" lang="es" hreflang="es" title="Español">ES</a>
           <a href="/pt/privacy/motsmeles/" lang="pt" hreflang="pt" title="Português">PT</a>
+        </div>
         </div>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -88,6 +90,9 @@
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
           </svg>
+        </button>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-label-open="Menu" data-label-close="Close the menu">
+          <span class="nav-bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
       </div>
     </div>

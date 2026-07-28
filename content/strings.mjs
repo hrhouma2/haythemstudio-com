@@ -9,10 +9,10 @@ export const strings = {
     colon: ": ",
     updated: "27 July 2026",
     home: {
-      title: "Haythem Studio — Android apps by GNeurone AI",
+      title: "Haythem Studio — Android games and tools that work offline",
       description:
-        "Five offline Android applications published by GNeurone AI: puzzles, word search and a Qibla compass. No ads, no account, no in-app purchases.",
-      ogDescription: "Five offline Android applications: no ads, no account, no in-app purchases.",
+        "Five Android apps by GNeurone AI: a parking puzzle, one-line drawing, fifteen arcade classics, an Arabic word search and a Qibla compass. They open in a second and keep working without a signal.",
+      ogDescription: "Five Android apps that open in a second and keep working without a signal.",
     },
     nav: {
       apps: "Applications",
@@ -21,66 +21,70 @@ export const strings = {
       contact: "Contact",
       theme: "Switch theme",
       language: "Language",
+      menu: "Menu",
+      menuClose: "Close the menu",
     },
     hero: {
-      badge: "Five applications on Google Play",
-      line1: "No account.",
-      line2: "No ads.",
-      line3: "No compromise.",
+      badge: "Five apps live on Google Play",
+      line1: "Games that",
+      line2: "just work,",
+      line3: "even offline.",
       lede:
-        "Haythem Studio builds Android games and utilities that run offline. Five applications published by GNeurone AI, with no data collection and no in-app purchases.",
-      ctaPrimary: "Explore the applications",
-      ctaSecondary: "Privacy policies",
-      statApps: "Published applications",
-      statTrackers: "Trackers or ads",
-      statOffline: "Computed offline",
-      chipCollect: "Zero collection",
-      chipOffline: "Works without a network",
+        "Haythem Studio makes Android apps that open in a second and keep going without a signal. Four puzzle games and a Qibla compass, published by GNeurone AI and fully unlocked from the first launch.",
+      ctaPrimary: "Browse the apps",
+      ctaSecondary: "Our privacy promise",
+      statApps: "Apps on Google Play",
+      statLevels: "Levels and puzzles",
+      statOffline: "Computed on your phone",
+      chipCollect: "Your data stays here",
+      chipOffline: "Plays in airplane mode",
     },
     marquee: [
-      "Offline",
-      "No advertising",
-      "No account",
-      "No in-app purchase",
-      "No tracker",
+      "Opens instantly",
+      "Plays offline",
+      "Private by design",
+      "Fully unlocked",
+      "Arabic · French · English",
       "Published by GNeurone AI",
     ],
     catalogue: {
       eyebrow: "The catalogue",
-      title: "Five applications, one promise",
+      title: "Pick your next puzzle",
       lede:
-        "Every title is published under the GNeurone AI account and runs entirely on the device, with no network request.",
+        "Four games and one everyday companion. Each one is published under the GNeurone AI account and runs entirely on your device.",
       cardLink: "Privacy",
     },
     principles: {
-      eyebrow: "Principles",
-      title: "What you will not find here",
+      eyebrow: "How they are built",
+      title: "Made to stay on your phone",
       lede:
-        "These rules are not configuration options: they are written into the code shipped on Google Play.",
+        "Four commitments written into the code shipped on Google Play, not options buried in a settings screen.",
       items: [
         {
-          title: "No personal data",
+          title: "Everything stays with you",
           text:
-            "Nothing is sent to GNeurone AI. Progress and preferences stay in the private space of the application, on your phone.",
+            "Scores, settings and progress live in the private storage of the app. Nothing travels to GNeurone AI, so there is nothing to leak.",
         },
         {
-          title: "No advertising",
-          text: "No banner, no interstitial, no advertising identifier read, no ad network SDK embedded.",
-        },
-        {
-          title: "No in-app purchase",
-          text: "Every feature is available without paying. No subscription, no virtual currency, no paid unlock.",
-        },
-        {
-          title: "Everything computed offline",
+          title: "Straight into the game",
           text:
-            "Qibla, prayer times, grids and levels are generated on the device. The applications stay usable in airplane mode.",
+            "Tap the icon and you are playing. Nothing interrupts a level, nothing loads between you and the next move.",
+        },
+        {
+          title: "The whole app, right away",
+          text:
+            "Every level, every theme and every feature is unlocked from the first launch, on every device you install it on.",
+        },
+        {
+          title: "Works in airplane mode",
+          text:
+            "Qibla direction, prayer times, grids and levels are computed on the device. A plane, a metro or a dead zone changes nothing.",
         },
       ],
     },
     contact: {
-      title: "A question about your data?",
-      lede: "GNeurone AI answers directly at the address declared on every privacy policy.",
+      title: "Talk to the studio",
+      lede: "Bug reports, ideas and questions go straight to GNeurone AI, at the address published on every privacy policy.",
       button: "Send an email",
     },
     footer: {
@@ -99,27 +103,27 @@ export const strings = {
       qibla: {
         tagline: "Qibla, prayer times and Hijri calendar",
         description:
-          "Qibla direction computed along the great circle, prayer times derived from the position of the sun and a Hijri calendar — all without a single network request.",
+          "Point your phone and find the Qibla, computed along the great circle. Prayer times follow the sun at your exact position, and the Hijri calendar comes along — in the desert as on a plane.",
       },
       motsmeles: {
         tagline: "Word search game",
         description:
-          "Word search grids designed for the Arabic alphabet, with six themes and a fresh grid generated for every game.",
+          "Word search grids built for the Arabic alphabet, with six themes and a brand-new grid every single game. You will never play the same board twice.",
       },
       parking: {
         tagline: "Vehicle unblocking puzzle",
         description:
-          "Sixty unblocking levels solved by computer before shipping: the optimal move count is known for each one.",
+          "Sixty levels of gridlock to untangle. Each one was solved by computer before shipping, so the optimal move count is known — beat it if you can.",
       },
       arcade: {
         tagline: "Collection of fifteen puzzles",
         description:
-          "Fifteen classic puzzles gathered in a single application: bottle sort, 2048, sliding puzzle, Hanoi, snake and more.",
+          "Fifteen classics in one app: bottle sort, 2048, sliding puzzle, Hanoi, snake and ten more. One icon on your home screen, an evening of games behind it.",
       },
       oneline: {
         tagline: "One-stroke drawing puzzle",
         description:
-          "Forty-five shapes to draw in a single stroke, all verified as solvable before publication. No text, no language required.",
+          "Forty-five shapes to draw without lifting your finger, each verified as solvable before publication. Not a word of text, so it plays in any language.",
       },
     },
     privacy: {
@@ -210,10 +214,10 @@ export const strings = {
     colon: " : ",
     updated: "27 juillet 2026",
     home: {
-      title: "Haythem Studio — Applications Android par GNeurone AI",
+      title: "Haythem Studio — Des jeux et outils Android qui marchent hors ligne",
       description:
-        "Cinq applications Android hors ligne éditées par GNeurone AI : puzzles, mots mêlés et boussole Qibla. Sans publicité, sans compte, sans achat intégré.",
-      ogDescription: "Cinq applications Android hors ligne : sans publicité, sans compte, sans achat intégré.",
+        "Cinq applications Android éditées par GNeurone AI : casse-tête de parking, tracé en un trait, quinze classiques d’arcade, mots mêlés arabes et boussole Qibla. Elles s’ouvrent en une seconde et continuent sans réseau.",
+      ogDescription: "Cinq applications Android qui s’ouvrent en une seconde et continuent sans réseau.",
     },
     nav: {
       apps: "Applications",
@@ -222,68 +226,70 @@ export const strings = {
       contact: "Contact",
       theme: "Changer de thème",
       language: "Langue",
+      menu: "Menu",
+      menuClose: "Fermer le menu",
     },
     hero: {
       badge: "Cinq applications sur Google Play",
-      line1: "Sans compte.",
-      line2: "Sans publicité.",
-      line3: "Sans compromis.",
+      line1: "Des jeux qui",
+      line2: "fonctionnent",
+      line3: "hors ligne.",
       lede:
-        "Haythem Studio conçoit des jeux et utilitaires Android qui fonctionnent hors ligne. Cinq applications publiées par GNeurone AI, sans collecte de données ni achat intégré.",
-      ctaPrimary: "Découvrir les applications",
-      ctaSecondary: "Politiques de confidentialité",
-      statApps: "Applications publiées",
-      statTrackers: "Traceur ou publicité",
-      statOffline: "Calculé hors ligne",
-      chipCollect: "Zéro collecte",
-      chipOffline: "Fonctionne sans réseau",
+        "Haythem Studio conçoit des applications Android qui s’ouvrent en une seconde et continuent sans réseau. Quatre casse-têtes et une boussole Qibla, éditées par GNeurone AI et débloquées dès le premier lancement.",
+      ctaPrimary: "Voir les applications",
+      ctaSecondary: "Notre engagement",
+      statApps: "Applications sur Google Play",
+      statLevels: "Niveaux et casse-têtes",
+      statOffline: "Calculé sur votre téléphone",
+      chipCollect: "Vos données restent ici",
+      chipOffline: "Jouable en mode avion",
     },
     marquee: [
-      "Hors ligne",
-      "Sans publicité",
-      "Sans compte",
-      "Sans achat intégré",
-      "Sans traceur",
+      "Ouverture immédiate",
+      "Jouable hors ligne",
+      "Privé par conception",
+      "Entièrement débloqué",
+      "Arabe · Français · Anglais",
       "Édité par GNeurone AI",
     ],
     catalogue: {
       eyebrow: "Le catalogue",
-      title: "Cinq applications, une même promesse",
+      title: "Choisissez votre prochain casse-tête",
       lede:
-        "Chaque titre est publié sous le compte GNeurone AI et fonctionne intégralement sur l’appareil, sans requête réseau.",
+        "Quatre jeux et un compagnon du quotidien. Chacun est publié sous le compte GNeurone AI et tourne intégralement sur votre appareil.",
       cardLink: "Confidentialité",
     },
     principles: {
-      eyebrow: "Principes",
-      title: "Ce que vous ne trouverez pas ici",
+      eyebrow: "Comment elles sont faites",
+      title: "Conçues pour rester sur votre téléphone",
       lede:
-        "Ces règles ne sont pas des options de configuration : elles sont inscrites dans le code livré sur Google Play.",
+        "Quatre engagements inscrits dans le code livré sur Google Play, et non des options enfouies dans un écran de réglages.",
       items: [
         {
-          title: "Aucune donnée personnelle",
+          title: "Tout reste chez vous",
           text:
-            "Rien n’est envoyé à GNeurone AI. Progression et préférences restent dans l’espace privé de l’application, sur votre téléphone.",
+            "Scores, réglages et progression vivent dans l’espace privé de l’application. Rien ne part vers GNeurone AI, donc il n’y a rien à faire fuiter.",
         },
         {
-          title: "Aucune publicité",
+          title: "Directement dans le jeu",
           text:
-            "Pas de bannière, pas d’interstitiel, pas d’identifiant publicitaire lu, pas de kit de régie embarqué.",
+            "Vous touchez l’icône, vous jouez. Rien n’interrompt un niveau, rien ne se charge entre vous et le coup suivant.",
         },
         {
-          title: "Aucun achat intégré",
+          title: "L’application entière, tout de suite",
           text:
-            "Toutes les fonctionnalités sont accessibles sans payer. Ni abonnement, ni monnaie virtuelle, ni déblocage payant.",
+            "Chaque niveau, chaque thème et chaque fonction est débloqué dès le premier lancement, sur tous vos appareils.",
         },
         {
-          title: "Tout est calculé hors ligne",
+          title: "Fonctionne en mode avion",
           text:
-            "Qibla, horaires, grilles et niveaux sont générés sur l’appareil. Les applications restent utilisables en mode avion.",
+            "Direction de la Qibla, horaires, grilles et niveaux sont calculés sur l’appareil. Un avion, un métro ou une zone blanche n’y change rien.",
         },
       ],
     },
     contact: {
-      title: "Une question sur vos&nbsp;données&nbsp;?",
-      lede: "GNeurone AI répond directement à l’adresse déclarée sur chaque politique de confidentialité.",
+      title: "Écrire au studio",
+      lede: "Signalements, idées et questions arrivent directement chez GNeurone AI, à l’adresse publiée sur chaque politique de confidentialité.",
       button: "Écrire un e-mail",
     },
     footer: {
@@ -302,27 +308,27 @@ export const strings = {
       qibla: {
         tagline: "Qibla, horaires de prière et calendrier hégirien",
         description:
-          "Direction de la Qibla calculée par orthodromie, horaires de prière issus de la position du soleil et calendrier hégirien — le tout sans aucune requête réseau.",
+          "Orientez le téléphone et trouvez la Qibla, calculée par orthodromie. Les horaires suivent le soleil à votre position exacte, avec le calendrier hégirien — dans le désert comme en avion.",
       },
       motsmeles: {
         tagline: "Jeu de mots mêlés",
         description:
-          "Grilles de mots mêlés conçues pour l’alphabet arabe, avec six thèmes et une grille générée à chaque partie.",
+          "Des grilles pensées pour l’alphabet arabe, six thèmes et une grille inédite à chaque partie. Vous ne rejouerez jamais deux fois la même.",
       },
       parking: {
         tagline: "Casse-tête de déblocage de véhicules",
         description:
-          "Soixante niveaux de déblocage résolus par ordinateur avant livraison : le nombre de coups optimal est connu pour chacun.",
+          "Soixante embouteillages à démêler. Chacun a été résolu par ordinateur avant publication : le nombre de coups optimal est connu, à vous de l’égaler.",
       },
       arcade: {
         tagline: "Collection de quinze casse-têtes",
         description:
-          "Quinze casse-têtes classiques réunis dans une seule application : tri de flacons, 2048, taquin, Hanoï, serpent et plus.",
+          "Quinze classiques dans une seule application : tri de flacons, 2048, taquin, Hanoï, serpent et dix autres. Une icône sur l’écran d’accueil, une soirée de jeu derrière.",
       },
       oneline: {
         tagline: "Puzzle de tracé en un seul trait",
         description:
-          "Quarante-cinq figures à tracer d’un seul trait, toutes vérifiées comme résolubles avant publication. Aucun texte, aucune langue requise.",
+          "Quarante-cinq figures à tracer sans lever le doigt, toutes vérifiées comme résolubles avant publication. Pas un mot de texte, donc jouable dans toutes les langues.",
       },
     },
     privacy: {
@@ -413,10 +419,10 @@ export const strings = {
     colon: ": ",
     updated: "٢٧ يوليو ٢٠٢٦",
     home: {
-      title: "Haythem Studio — تطبيقات أندرويد من GNeurone AI",
+      title: "Haythem Studio — ألعاب وأدوات أندرويد تعمل دون إنترنت",
       description:
-        "خمسة تطبيقات أندرويد تعمل دون إنترنت، تنشرها GNeurone AI: ألعاب ألغاز، بحث عن الكلمات، وبوصلة القبلة. بلا إعلانات، بلا حساب، بلا شراء داخل التطبيق.",
-      ogDescription: "خمسة تطبيقات أندرويد تعمل دون إنترنت: بلا إعلانات، بلا حساب، بلا شراء داخل التطبيق.",
+        "خمسة تطبيقات أندرويد من GNeurone AI: لغز مواقف السيارات، الرسم بخط واحد، خمسة عشر لعبة أركيد كلاسيكية، بحث عن الكلمات بالعربية، وبوصلة القبلة. تفتح في ثانية وتواصل العمل دون شبكة.",
+      ogDescription: "خمسة تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة.",
     },
     nav: {
       apps: "التطبيقات",
@@ -425,62 +431,64 @@ export const strings = {
       contact: "اتصل بنا",
       theme: "تغيير المظهر",
       language: "اللغة",
+      menu: "القائمة",
+      menuClose: "إغلاق القائمة",
     },
     hero: {
       badge: "خمسة تطبيقات على Google Play",
-      line1: "بلا حساب.",
-      line2: "بلا إعلانات.",
-      line3: "بلا مساومة.",
+      line1: "ألعاب وأدوات",
+      line2: "تعمل ببساطة،",
+      line3: "حتى دون إنترنت.",
       lede:
-        "يصمّم Haythem Studio ألعابًا وأدوات أندرويد تعمل دون إنترنت. خمسة تطبيقات تنشرها GNeurone AI، بلا جمع للبيانات وبلا شراء داخل التطبيق.",
-      ctaPrimary: "استكشف التطبيقات",
-      ctaSecondary: "سياسات الخصوصية",
-      statApps: "تطبيقات منشورة",
-      statTrackers: "متتبّع أو إعلان",
-      statOffline: "يُحسب دون إنترنت",
-      chipCollect: "صفر جمع للبيانات",
-      chipOffline: "يعمل دون شبكة",
+        "يصنع Haythem Studio تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة. أربع ألعاب ألغاز وبوصلة قبلة، تنشرها GNeurone AI ومفتوحة بالكامل منذ التشغيل الأول.",
+      ctaPrimary: "تصفّح التطبيقات",
+      ctaSecondary: "التزامنا بالخصوصية",
+      statApps: "تطبيقات على Google Play",
+      statLevels: "مرحلة ولغز",
+      statOffline: "يُحسب على هاتفك",
+      chipCollect: "بياناتك تبقى هنا",
+      chipOffline: "يعمل في وضع الطيران",
     },
     marquee: [
-      "دون إنترنت",
-      "بلا إعلانات",
-      "بلا حساب",
-      "بلا شراء داخل التطبيق",
-      "بلا متتبّعات",
+      "يفتح فورًا",
+      "يعمل دون إنترنت",
+      "خاص بالتصميم",
+      "مفتوح بالكامل",
+      "العربية · الفرنسية · الإنجليزية",
       "من نشر GNeurone AI",
     ],
     catalogue: {
       eyebrow: "القائمة",
-      title: "خمسة تطبيقات، وعد واحد",
-      lede: "كل تطبيق منشور تحت حساب GNeurone AI ويعمل بالكامل على الجهاز، دون أي طلب شبكي.",
+      title: "اختر لغزك التالي",
+      lede: "أربع ألعاب ورفيق يومي واحد. كلها منشورة تحت حساب GNeurone AI وتعمل بالكامل على جهازك.",
       cardLink: "الخصوصية",
     },
     principles: {
-      eyebrow: "المبادئ",
-      title: "ما لن تجده هنا",
-      lede: "هذه القواعد ليست خيارات في الإعدادات: إنها مكتوبة في الشيفرة المنشورة على Google Play.",
+      eyebrow: "كيف صُنعت",
+      title: "مصمَّمة لتبقى على هاتفك",
+      lede: "أربعة التزامات مكتوبة في الشيفرة المنشورة على Google Play، لا خيارات مدفونة في شاشة إعدادات.",
       items: [
         {
-          title: "لا بيانات شخصية",
-          text: "لا يُرسَل أي شيء إلى GNeurone AI. يبقى التقدّم والتفضيلات في المساحة الخاصة بالتطبيق على هاتفك.",
+          title: "كل شيء يبقى عندك",
+          text: "النتائج والإعدادات والتقدّم تعيش في المساحة الخاصة بالتطبيق. لا شيء يذهب إلى GNeurone AI، فلا شيء هناك ليُسرَّب.",
         },
         {
-          title: "لا إعلانات",
-          text: "لا لافتات، ولا إعلانات بينية، ولا قراءة لمعرّف إعلاني، ولا حزمة تطوير إعلانية مدمجة.",
+          title: "مباشرة إلى اللعب",
+          text: "تلمس الأيقونة فتجد نفسك تلعب. لا شيء يقطع المرحلة، ولا شيء يُحمَّل بينك وبين النقلة التالية.",
         },
         {
-          title: "لا شراء داخل التطبيق",
-          text: "كل الميزات متاحة دون دفع. لا اشتراك، ولا عملة افتراضية، ولا فتح مدفوع.",
+          title: "التطبيق كاملًا، فورًا",
+          text: "كل مرحلة وكل موضوع وكل ميزة مفتوحة منذ التشغيل الأول، على كل جهاز تثبّته عليه.",
         },
         {
-          title: "كل شيء يُحسب دون إنترنت",
-          text: "القبلة والمواقيت والشبكات والمراحل تُولَّد على الجهاز. تبقى التطبيقات صالحة للاستعمال في وضع الطيران.",
+          title: "يعمل في وضع الطيران",
+          text: "اتجاه القبلة والمواقيت والشبكات والمراحل تُحسب على الجهاز. الطائرة أو المترو أو انقطاع التغطية لا يغيّر شيئًا.",
         },
       ],
     },
     contact: {
-      title: "سؤال عن بياناتك؟",
-      lede: "تجيب GNeurone AI مباشرة على العنوان المذكور في كل سياسة خصوصية.",
+      title: "راسل الاستوديو",
+      lede: "البلاغات والأفكار والأسئلة تصل مباشرة إلى GNeurone AI، على العنوان المنشور في كل سياسة خصوصية.",
       button: "أرسل بريدًا إلكترونيًا",
     },
     footer: {
@@ -499,25 +507,25 @@ export const strings = {
       qibla: {
         tagline: "القبلة ومواقيت الصلاة والتقويم الهجري",
         description:
-          "اتجاه القبلة محسوب بالدائرة العظمى، ومواقيت الصلاة مستخرجة من موضع الشمس، مع تقويم هجري — كل ذلك دون أي طلب شبكي.",
+          "وجّه هاتفك فتجد القبلة، محسوبة بالدائرة العظمى. المواقيت تتبع الشمس في موقعك بالضبط، ومعها التقويم الهجري — في الصحراء كما في الطائرة.",
       },
       motsmeles: {
         tagline: "لعبة بحث عن الكلمات",
-        description: "شبكات بحث عن الكلمات مصمَّمة للحروف العربية، بستة مواضيع وشبكة جديدة تُولَّد في كل جولة.",
+        description: "شبكات مبنية للحروف العربية، بستة مواضيع وشبكة جديدة تمامًا في كل جولة. لن تلعب الشبكة نفسها مرتين.",
       },
       parking: {
         tagline: "لغز إخراج السيارات",
-        description: "ستون مرحلة تم حلّها بالحاسوب قبل النشر: عدد النقلات الأمثل معروف لكل مرحلة.",
+        description: "ستون ازدحامًا لتفكّه. كل مرحلة حُلَّت بالحاسوب قبل النشر، فعدد النقلات الأمثل معروف — حاول أن تبلغه.",
       },
       arcade: {
         tagline: "مجموعة من خمسة عشر لغزًا",
         description:
-          "خمسة عشر لغزًا كلاسيكيًا في تطبيق واحد: ترتيب القوارير، 2048، لعبة التزحلق، أبراج هانوي، الأفعى وغيرها.",
+          "خمسة عشر كلاسيكيًا في تطبيق واحد: ترتيب القوارير، 2048، لعبة التزحلق، أبراج هانوي، الأفعى وعشرة غيرها. أيقونة واحدة على شاشتك، وسهرة كاملة خلفها.",
       },
       oneline: {
         tagline: "لغز الرسم بخط واحد",
         description:
-          "خمسة وأربعون شكلًا تُرسم بخط واحد متصل، جميعها مُتحقَّق من قابلية حلّها قبل النشر. بلا نصوص، وبلا حاجة إلى لغة.",
+          "خمسة وأربعون شكلًا تُرسم دون رفع إصبعك، جميعها مُتحقَّق من قابلية حلّها قبل النشر. بلا كلمة نص واحدة، فهي تُلعب بأي لغة.",
       },
     },
     privacy: {
@@ -601,10 +609,10 @@ export const strings = {
     colon: ": ",
     updated: "27 de julio de 2026",
     home: {
-      title: "Haythem Studio — Aplicaciones Android de GNeurone AI",
+      title: "Haythem Studio — Juegos y utilidades Android que funcionan sin conexión",
       description:
-        "Cinco aplicaciones Android sin conexión publicadas por GNeurone AI: rompecabezas, sopa de letras y brújula Qibla. Sin anuncios, sin cuenta, sin compras integradas.",
-      ogDescription: "Cinco aplicaciones Android sin conexión: sin anuncios, sin cuenta, sin compras integradas.",
+        "Cinco aplicaciones Android de GNeurone AI: rompecabezas de aparcamiento, trazo único, quince clásicos de arcade, sopa de letras en árabe y brújula Qibla. Se abren en un segundo y siguen funcionando sin cobertura.",
+      ogDescription: "Cinco aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura.",
     },
     nav: {
       apps: "Aplicaciones",
@@ -613,68 +621,70 @@ export const strings = {
       contact: "Contacto",
       theme: "Cambiar de tema",
       language: "Idioma",
+      menu: "Menú",
+      menuClose: "Cerrar el menú",
     },
     hero: {
       badge: "Cinco aplicaciones en Google Play",
-      line1: "Sin cuenta.",
-      line2: "Sin anuncios.",
-      line3: "Sin concesiones.",
+      line1: "Juegos que",
+      line2: "funcionan",
+      line3: "sin conexión.",
       lede:
-        "Haythem Studio crea juegos y utilidades Android que funcionan sin conexión. Cinco aplicaciones publicadas por GNeurone AI, sin recogida de datos ni compras integradas.",
-      ctaPrimary: "Descubrir las aplicaciones",
-      ctaSecondary: "Políticas de privacidad",
-      statApps: "Aplicaciones publicadas",
-      statTrackers: "Rastreadores o anuncios",
-      statOffline: "Calculado sin conexión",
-      chipCollect: "Cero recogida de datos",
-      chipOffline: "Funciona sin red",
+        "Haythem Studio crea aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura. Cuatro rompecabezas y una brújula Qibla, publicados por GNeurone AI y desbloqueados desde el primer arranque.",
+      ctaPrimary: "Ver las aplicaciones",
+      ctaSecondary: "Nuestro compromiso",
+      statApps: "Aplicaciones en Google Play",
+      statLevels: "Niveles y rompecabezas",
+      statOffline: "Calculado en su teléfono",
+      chipCollect: "Sus datos se quedan aquí",
+      chipOffline: "Se juega en modo avión",
     },
     marquee: [
-      "Sin conexión",
-      "Sin publicidad",
-      "Sin cuenta",
-      "Sin compras integradas",
-      "Sin rastreadores",
+      "Apertura inmediata",
+      "Se juega sin conexión",
+      "Privado por diseño",
+      "Todo desbloqueado",
+      "Árabe · Francés · Inglés",
       "Publicado por GNeurone AI",
     ],
     catalogue: {
       eyebrow: "El catálogo",
-      title: "Cinco aplicaciones, una misma promesa",
+      title: "Elija su próximo rompecabezas",
       lede:
-        "Cada título se publica bajo la cuenta de GNeurone AI y funciona íntegramente en el dispositivo, sin ninguna petición de red.",
+        "Cuatro juegos y un compañero para el día a día. Cada uno se publica bajo la cuenta de GNeurone AI y funciona íntegramente en su dispositivo.",
       cardLink: "Privacidad",
     },
     principles: {
-      eyebrow: "Principios",
-      title: "Lo que no encontrará aquí",
+      eyebrow: "Cómo están hechas",
+      title: "Pensadas para quedarse en su teléfono",
       lede:
-        "Estas reglas no son opciones de configuración: están escritas en el código publicado en Google Play.",
+        "Cuatro compromisos escritos en el código publicado en Google Play, no opciones enterradas en una pantalla de ajustes.",
       items: [
         {
-          title: "Ningún dato personal",
+          title: "Todo se queda con usted",
           text:
-            "No se envía nada a GNeurone AI. El progreso y las preferencias permanecen en el espacio privado de la aplicación, en su teléfono.",
+            "Puntuaciones, ajustes y progreso viven en el espacio privado de la aplicación. Nada viaja hasta GNeurone AI, así que no hay nada que filtrar.",
         },
         {
-          title: "Ninguna publicidad",
+          title: "Directo al juego",
           text:
-            "Sin banners, sin intersticiales, sin lectura de identificadores publicitarios y sin SDK de publicidad integrado.",
+            "Toca el icono y ya está jugando. Nada interrumpe un nivel, nada se carga entre usted y el siguiente movimiento.",
         },
         {
-          title: "Ninguna compra integrada",
+          title: "La aplicación entera, de inmediato",
           text:
-            "Todas las funciones están disponibles sin pagar. Sin suscripción, sin moneda virtual y sin desbloqueos de pago.",
+            "Cada nivel, cada tema y cada función está desbloqueado desde el primer arranque, en todos los dispositivos donde la instale.",
         },
         {
-          title: "Todo se calcula sin conexión",
+          title: "Funciona en modo avión",
           text:
-            "Qibla, horarios, cuadrículas y niveles se generan en el dispositivo. Las aplicaciones siguen siendo utilizables en modo avión.",
+            "Dirección de la Qibla, horarios, cuadrículas y niveles se calculan en el dispositivo. Un avión, un metro o una zona sin cobertura no cambian nada.",
         },
       ],
     },
     contact: {
-      title: "¿Alguna pregunta sobre sus datos?",
-      lede: "GNeurone AI responde directamente en la dirección declarada en cada política de privacidad.",
+      title: "Escribir al estudio",
+      lede: "Errores, ideas y preguntas llegan directamente a GNeurone AI, a la dirección publicada en cada política de privacidad.",
       button: "Enviar un correo",
     },
     footer: {
@@ -693,27 +703,27 @@ export const strings = {
       qibla: {
         tagline: "Qibla, horarios de oración y calendario hégira",
         description:
-          "Dirección de la Qibla calculada por círculo máximo, horarios de oración obtenidos de la posición del sol y calendario hégira, todo ello sin una sola petición de red.",
+          "Oriente el teléfono y encuentre la Qibla, calculada por círculo máximo. Los horarios siguen al sol en su posición exacta, con el calendario hégira incluido: en el desierto igual que en un avión.",
       },
       motsmeles: {
         tagline: "Juego de sopa de letras",
         description:
-          "Cuadrículas de sopa de letras diseñadas para el alfabeto árabe, con seis temas y una cuadrícula generada en cada partida.",
+          "Cuadrículas construidas para el alfabeto árabe, con seis temas y una cuadrícula nueva en cada partida. Nunca jugará dos veces la misma.",
       },
       parking: {
         tagline: "Rompecabezas de desbloqueo de vehículos",
         description:
-          "Sesenta niveles de desbloqueo resueltos por ordenador antes de su publicación: el número óptimo de movimientos se conoce para cada uno.",
+          "Sesenta atascos que desenredar. Cada uno fue resuelto por ordenador antes de publicarse, así que el número óptimo de movimientos se conoce: iguálelo si puede.",
       },
       arcade: {
         tagline: "Colección de quince rompecabezas",
         description:
-          "Quince rompecabezas clásicos reunidos en una sola aplicación: clasificación de frascos, 2048, puzle deslizante, Hanói, serpiente y más.",
+          "Quince clásicos en una sola aplicación: clasificación de frascos, 2048, puzle deslizante, Hanói, serpiente y diez más. Un icono en la pantalla de inicio, una tarde de juego detrás.",
       },
       oneline: {
         tagline: "Rompecabezas de trazo único",
         description:
-          "Cuarenta y cinco figuras que se dibujan de un solo trazo, todas verificadas como resolubles antes de su publicación. Sin texto y sin idioma necesario.",
+          "Cuarenta y cinco figuras que se dibujan sin levantar el dedo, todas verificadas como resolubles antes de publicarse. Ni una palabra de texto, así que se juega en cualquier idioma.",
       },
     },
     privacy: {
@@ -804,10 +814,10 @@ export const strings = {
     colon: ": ",
     updated: "27 de julho de 2026",
     home: {
-      title: "Haythem Studio — Aplicações Android da GNeurone AI",
+      title: "Haythem Studio — Jogos e utilitários Android que funcionam offline",
       description:
-        "Cinco aplicações Android offline publicadas pela GNeurone AI: quebra-cabeças, caça-palavras e bússola Qibla. Sem anúncios, sem conta, sem compras no aplicativo.",
-      ogDescription: "Cinco aplicações Android offline: sem anúncios, sem conta, sem compras no aplicativo.",
+        "Cinco aplicações Android da GNeurone AI: quebra-cabeças de estacionamento, traço único, quinze clássicos de arcade, caça-palavras em árabe e bússola Qibla. Abrem num segundo e continuam sem rede.",
+      ogDescription: "Cinco aplicações Android que abrem num segundo e continuam sem rede.",
     },
     nav: {
       apps: "Aplicações",
@@ -816,67 +826,69 @@ export const strings = {
       contact: "Contacto",
       theme: "Mudar de tema",
       language: "Idioma",
+      menu: "Menu",
+      menuClose: "Fechar o menu",
     },
     hero: {
       badge: "Cinco aplicações no Google Play",
-      line1: "Sem conta.",
-      line2: "Sem anúncios.",
-      line3: "Sem concessões.",
+      line1: "Jogos que",
+      line2: "funcionam,",
+      line3: "até offline.",
       lede:
-        "A Haythem Studio cria jogos e utilitários Android que funcionam offline. Cinco aplicações publicadas pela GNeurone AI, sem recolha de dados nem compras no aplicativo.",
-      ctaPrimary: "Descobrir as aplicações",
-      ctaSecondary: "Políticas de privacidade",
-      statApps: "Aplicações publicadas",
-      statTrackers: "Rastreadores ou anúncios",
-      statOffline: "Calculado offline",
-      chipCollect: "Zero recolha de dados",
-      chipOffline: "Funciona sem rede",
+        "A Haythem Studio cria aplicações Android que abrem num segundo e continuam sem rede. Quatro quebra-cabeças e uma bússola Qibla, publicados pela GNeurone AI e desbloqueados desde o primeiro arranque.",
+      ctaPrimary: "Ver as aplicações",
+      ctaSecondary: "O nosso compromisso",
+      statApps: "Aplicações no Google Play",
+      statLevels: "Níveis e quebra-cabeças",
+      statOffline: "Calculado no seu telemóvel",
+      chipCollect: "Os seus dados ficam aqui",
+      chipOffline: "Joga-se em modo de voo",
     },
     marquee: [
-      "Offline",
-      "Sem publicidade",
-      "Sem conta",
-      "Sem compras no aplicativo",
-      "Sem rastreadores",
+      "Abertura imediata",
+      "Joga-se offline",
+      "Privado por conceção",
+      "Tudo desbloqueado",
+      "Árabe · Francês · Inglês",
       "Publicado pela GNeurone AI",
     ],
     catalogue: {
       eyebrow: "O catálogo",
-      title: "Cinco aplicações, uma mesma promessa",
+      title: "Escolha o seu próximo quebra-cabeças",
       lede:
-        "Cada título é publicado sob a conta da GNeurone AI e funciona inteiramente no aparelho, sem qualquer pedido de rede.",
+        "Quatro jogos e um companheiro para o dia a dia. Cada um é publicado sob a conta da GNeurone AI e funciona inteiramente no seu aparelho.",
       cardLink: "Privacidade",
     },
     principles: {
-      eyebrow: "Princípios",
-      title: "O que não vai encontrar aqui",
-      lede: "Estas regras não são opções de configuração: estão escritas no código publicado no Google Play.",
+      eyebrow: "Como são feitas",
+      title: "Feitas para ficar no seu telemóvel",
+      lede: "Quatro compromissos escritos no código publicado no Google Play, e não opções escondidas num ecrã de definições.",
       items: [
         {
-          title: "Nenhum dado pessoal",
+          title: "Tudo fica consigo",
           text:
-            "Nada é enviado à GNeurone AI. O progresso e as preferências ficam no espaço privado da aplicação, no seu telemóvel.",
+            "Pontuações, definições e progresso vivem no espaço privado da aplicação. Nada viaja até à GNeurone AI, por isso não há nada para vazar.",
         },
         {
-          title: "Nenhuma publicidade",
+          title: "Direto para o jogo",
           text:
-            "Sem banners, sem intersticiais, sem leitura de identificador publicitário e sem SDK de publicidade integrado.",
+            "Toca no ícone e já está a jogar. Nada interrompe um nível, nada carrega entre si e a jogada seguinte.",
         },
         {
-          title: "Nenhuma compra no aplicativo",
+          title: "A aplicação inteira, já",
           text:
-            "Todas as funcionalidades estão disponíveis sem pagar. Sem subscrição, sem moeda virtual e sem desbloqueio pago.",
+            "Cada nível, cada tema e cada funcionalidade está desbloqueado desde o primeiro arranque, em todos os aparelhos onde a instalar.",
         },
         {
-          title: "Tudo é calculado offline",
+          title: "Funciona em modo de voo",
           text:
-            "Qibla, horários, grelhas e níveis são gerados no aparelho. As aplicações continuam utilizáveis em modo de voo.",
+            "Direção da Qibla, horários, grelhas e níveis são calculados no aparelho. Um avião, um metro ou uma zona sem cobertura não mudam nada.",
         },
       ],
     },
     contact: {
-      title: "Alguma questão sobre os seus dados?",
-      lede: "A GNeurone AI responde diretamente no endereço indicado em cada política de privacidade.",
+      title: "Escrever ao estúdio",
+      lede: "Relatos de erros, ideias e perguntas chegam diretamente à GNeurone AI, no endereço publicado em cada política de privacidade.",
       button: "Enviar um e-mail",
     },
     footer: {
@@ -895,27 +907,27 @@ export const strings = {
       qibla: {
         tagline: "Qibla, horários de oração e calendário hégira",
         description:
-          "Direção da Qibla calculada pelo círculo máximo, horários de oração obtidos a partir da posição do sol e calendário hégira — tudo isto sem um único pedido de rede.",
+          "Aponte o telemóvel e encontre a Qibla, calculada pelo círculo máximo. Os horários seguem o sol na sua posição exata, com o calendário hégira à mistura — no deserto tal como num avião.",
       },
       motsmeles: {
         tagline: "Jogo de caça-palavras",
         description:
-          "Grelhas de caça-palavras concebidas para o alfabeto árabe, com seis temas e uma grelha gerada em cada partida.",
+          "Grelhas construídas para o alfabeto árabe, com seis temas e uma grelha inédita em cada partida. Nunca vai jogar duas vezes a mesma.",
       },
       parking: {
         tagline: "Quebra-cabeças de desbloqueio de veículos",
         description:
-          "Sessenta níveis de desbloqueio resolvidos por computador antes da publicação: o número ótimo de movimentos é conhecido para cada um.",
+          "Sessenta engarrafamentos para desenredar. Cada um foi resolvido por computador antes da publicação, por isso o número ótimo de movimentos é conhecido: iguale-o se conseguir.",
       },
       arcade: {
         tagline: "Coleção de quinze quebra-cabeças",
         description:
-          "Quinze quebra-cabeças clássicos reunidos numa única aplicação: separação de frascos, 2048, jogo deslizante, Hanói, cobra e muito mais.",
+          "Quinze clássicos numa única aplicação: separação de frascos, 2048, jogo deslizante, Hanói, cobra e mais dez. Um ícone no ecrã inicial, uma noite de jogo por trás.",
       },
       oneline: {
         tagline: "Quebra-cabeças de traço único",
         description:
-          "Quarenta e cinco figuras para desenhar num só traço, todas verificadas como solucionáveis antes da publicação. Sem texto e sem necessidade de idioma.",
+          "Quarenta e cinco figuras para desenhar sem levantar o dedo, todas verificadas como solucionáveis antes da publicação. Nem uma palavra de texto, por isso joga-se em qualquer idioma.",
       },
     },
     privacy: {
