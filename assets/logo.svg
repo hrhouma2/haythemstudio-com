@@ -36,6 +36,6 @@
     <rect x=".75" y=".75" width="46.5" height="46.5" rx="12.4" fill="none" stroke="#3ddc97" stroke-opacity=".3"/>
   </g>
 
-  <text x="90" y="52" font-family="Syne, Figtree, 'Segoe UI', sans-serif" font-size="27" font-weight="800" letter-spacing="-0.8" fill="#eafff6">Haythem <tspan fill="#3ddc97">Studio</tspan></text>
+  <text x="90" y="52" font-family="Archivo, Figtree, 'Segoe UI', sans-serif" font-size="27" font-weight="800" letter-spacing="-0.8" fill="#eafff6">Haythem <tspan fill="#3ddc97">Studio</tspan></text>
   <text x="91" y="70" font-family="Figtree, 'Segoe UI', sans-serif" font-size="10.5" font-weight="600" letter-spacing="2.6" fill="#7f9a90">ANDROID APPS &#183; GNEURONE AI</text>
 </svg>

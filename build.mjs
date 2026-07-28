@@ -30,8 +30,8 @@ const path = (locale, rest = "/") => `${localeMeta[locale].base}${rest}`;
 
 const fonts = (locale) =>
   locale === "ar"
-    ? "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-    : "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap";
+    ? "https://fonts.googleapis.com/css2?family=Archivo:wght@600..800&family=Cairo:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+    : "https://fonts.googleapis.com/css2?family=Archivo:wght@600..800&family=Figtree:wght@400;500;600;700&display=swap";
 
 const alternates = (rest) =>
   [

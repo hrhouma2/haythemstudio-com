@@ -27,7 +27,7 @@
   --max: 1180px;
   --nav-h: 68px;
 
-  --font-display: "Syne", "Segoe UI", sans-serif;
+  --font-display: "Archivo", "Segoe UI", sans-serif;
   --font-body: "Figtree", "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
 
@@ -212,7 +212,7 @@ a {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.02rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--ink);
   text-decoration: none;
 }
@@ -553,9 +553,9 @@ a {
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
-  line-height: 1.1;
-  letter-spacing: -0.045em;
+  font-size: clamp(2.35rem, 4.9vw, 3.85rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   margin: 1.25rem 0 1.15rem;
 }
 
@@ -614,7 +614,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3.2vw, 2.1rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
@@ -785,7 +785,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 4.4vw, 2.9rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.028em;
   line-height: 1.1;
   margin-bottom: 0.7rem;
 }
@@ -900,7 +900,7 @@ a {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
   margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
@@ -1091,7 +1091,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3.4vw, 2.3rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
   margin-bottom: 0.5rem;
 }
 
@@ -1162,7 +1162,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4.2vw, 2.6rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.028em;
   line-height: 1.1;
   margin-bottom: 0.75rem;
 }
@@ -1180,7 +1180,7 @@ a {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
   margin: 2.3rem 0 0.7rem;
 }
 
