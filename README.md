@@ -12,6 +12,7 @@ Cinq langues : anglais (langue principale), français, arabe, espagnol, portugai
 | `build.mjs` | Génère les pages HTML de toutes les langues |
 | `check.mjs` | Vérifie que toutes les pages attendues ont été générées |
 | `assets/` | CSS, JavaScript, logo (partagés par toutes les langues) |
+| `assets/fonts/` | Polices auto-hébergées (woff2 variables) |
 
 ## Ajouter une application
 
@@ -42,6 +43,29 @@ Fichiers de marque :
 
 Le signe est repris en SVG inline dans la navigation (`brandLogo` dans `build.mjs`) :
 toute modification du dessin doit être reportée dans ces quatre endroits.
+
+## Polices
+
+Les polices sont servies depuis `assets/fonts/`, pas depuis Google Fonts : la
+feuille de style de `fonts.googleapis.com` bloquait l'affichage le temps d'une
+poignée de main TLS vers un second domaine, soit environ 400 ms de retard sur le
+premier texte affiché.
+
+| Fichier | Rôle |
+|---------|------|
+| `archivo-latin*.woff2` | Titres, graisses 600 à 800 |
+| `figtree-latin*.woff2` | Texte courant, graisses 400 à 700 |
+| `cairo-*.woff2` | Pages arabes, titres et texte |
+
+Ce sont des polices variables : un seul fichier couvre toute la plage de
+graisses. Les déclarations `@font-face` sont en tête de `assets/styles.css` et
+portent un `unicode-range`, donc un lecteur francophone ne télécharge jamais le
+sous-ensemble arabe. `build.mjs` ajoute un `<link rel="preload">` sur les deux
+fichiers utiles à la langue de la page.
+
+Le cache est réglé sur un an en immuable dans `vercel.json` : remplacer une
+police impose de changer le nom du fichier, sinon les visiteurs garderont
+l'ancienne version.
 
 ## La méduse du hero
 

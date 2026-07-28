@@ -12,6 +12,12 @@ const assets = [
   "assets/main.js",
   "assets/jellyfish.js",
   "assets/favicon.svg",
+  "assets/fonts/archivo-latin.woff2",
+  "assets/fonts/archivo-latin-ext.woff2",
+  "assets/fonts/figtree-latin.woff2",
+  "assets/fonts/figtree-latin-ext.woff2",
+  "assets/fonts/cairo-arabic.woff2",
+  "assets/fonts/cairo-latin.woff2",
   "sitemap.xml",
   "robots.txt",
 ];

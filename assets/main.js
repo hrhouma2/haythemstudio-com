@@ -135,6 +135,19 @@
     counters.forEach((el) => countObserver.observe(el));
   }
 
+  /* ---------- Idle animations off screen ---------- */
+
+  const animated = document.querySelectorAll(".app-card, .marquee");
+  if (animated.length && "IntersectionObserver" in window) {
+    const idleObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => entry.target.classList.toggle("is-idle", !entry.isIntersecting));
+      },
+      { rootMargin: "150px 0px" }
+    );
+    animated.forEach((el) => idleObserver.observe(el));
+  }
+
   /* ---------- Pointer-follow glow on cards ---------- */
 
   if (window.matchMedia("(hover: hover)").matches) {

@@ -28,10 +28,15 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 
 const path = (locale, rest = "/") => `${localeMeta[locale].base}${rest}`;
 
+/**
+ * Les polices sont servies depuis /assets/fonts. Sans ces prechargements, le
+ * navigateur ne les decouvrirait qu'apres avoir analyse la feuille de style :
+ * on les demande des la lecture de l'en-tete, en parallele du CSS.
+ */
 const fonts = (locale) =>
-  locale === "ar"
-    ? "https://fonts.googleapis.com/css2?family=Archivo:wght@600..800&family=Cairo:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap"
-    : "https://fonts.googleapis.com/css2?family=Archivo:wght@600..800&family=Figtree:wght@400;500;600;700&display=swap";
+  (locale === "ar" ? ["cairo-arabic", "cairo-latin"] : ["archivo-latin", "figtree-latin"])
+    .map((file) => `  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/${file}.woff2" crossorigin>`)
+    .join("\n");
 
 const alternates = (rest) =>
   [
@@ -55,9 +60,7 @@ ${alternates(rest)}
   <meta property="og:url" content="${SITE_URL}${path(locale, rest)}">
   <meta property="og:locale" content="${locale}">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="${fonts(locale)}" rel="stylesheet">
+${fonts(locale)}
   <link rel="stylesheet" href="/assets/styles.css">`;
 
 const langSwitch = (locale, rest) => `        <div class="lang-switch" role="group" aria-label="${strings[locale].nav.language}">
