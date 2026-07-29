@@ -40,6 +40,14 @@ Fichiers de marque :
 | `assets/logo-mark.svg` | Signe seul (tuile carrée), pour icônes et avatars |
 | `assets/logo.svg` | Verrouillage horizontal signe + nom, pour presse et réseaux |
 | `assets/favicon.svg` | Version simplifiée pour les onglets du navigateur |
+| `favicon.ico` | Rendu matriciel 16/32/48 px, à la racine |
+| `apple-touch-icon.png` | 180 px, écran d'accueil iOS |
+| `assets/icon-192.png` | 192 px, Android et résultats de recherche |
+
+Les trois derniers sont des rendus de `assets/favicon.svg` : Google cherche
+`/favicon.ico` à la racine avant de lire les balises `<link>`, et sans lui la
+propriété reste affichée avec un globe générique dans Search Console. Les
+regénérer après toute retouche du signe.
 
 Le signe est repris en SVG inline dans la navigation (`brandLogo` dans `build.mjs`) :
 toute modification du dessin doit être reportée dans ces quatre endroits.

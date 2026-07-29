@@ -53,7 +53,10 @@ const head = ({ locale, title, description, rest, ogTitle, ogDescription }) => `
   <meta name="theme-color" content="#070b0a">
   <link rel="canonical" href="${SITE_URL}${path(locale, rest)}">
 ${alternates(rest)}
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${ogTitle || title}">
   <meta property="og:description" content="${ogDescription || description}">
