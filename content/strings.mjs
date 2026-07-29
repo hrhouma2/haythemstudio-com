@@ -204,6 +204,9 @@ export const strings = {
       changesHeading: "Changes",
       changesText:
         "Any change to this policy will be published on this page, with an updated date. A significant change will be announced in the release notes of the application.",
+      siteHeading: "About this website",
+      siteText:
+        "This website counts its page views with the tool built into our host, Vercel Web Analytics. No cookie, no persistent identifier, no advertising network. It tells us which pages are read, nothing about who reads them. The applications listed above are not concerned: they send nothing, to anyone.",
       contactHeading: "Contact us",
       footerNote: (name) => `Privacy policy of ${name}, published by GNeurone AI.`,
     },
@@ -409,6 +412,9 @@ export const strings = {
       changesHeading: "Modifications",
       changesText:
         "Toute modification de cette politique sera publiée sur cette page, avec une date de mise à jour actualisée. Un changement important sera annoncé dans les notes de version de l’application.",
+      siteHeading: "À propos de ce site",
+      siteText:
+        "Ce site compte ses pages vues avec l’outil intégré à notre hébergeur, Vercel Web Analytics. Aucun cookie, aucun identifiant persistant, aucune régie publicitaire. Nous savons quelles pages sont lues, rien sur les personnes qui les lisent. Les applications listées ci-dessus ne sont pas concernées : elles n’envoient rien, à personne.",
       contactHeading: "Nous contacter",
       footerNote: (name) => `Politique de confidentialité de ${name}, éditée par GNeurone AI.`,
     },
@@ -599,6 +605,9 @@ export const strings = {
       changesHeading: "التعديلات",
       changesText:
         "سيُنشر أي تعديل على هذه السياسة في هذه الصفحة مع تاريخ محدَّث. وسيُعلَن أي تغيير مهم في ملاحظات إصدار التطبيق.",
+      siteHeading: "عن هذا الموقع",
+      siteText:
+        "يحصي هذا الموقع صفحاته المشاهَدة بأداة Vercel Web Analytics المدمجة في خدمة الاستضافة. لا ملفات تعريف ارتباط، ولا معرّف دائم، ولا شبكة إعلانات. نعرف أي الصفحات تُقرأ، ولا نعرف شيئًا عمّن يقرؤها. أما التطبيقات المذكورة أعلاه فغير معنية: فهي لا ترسل شيئًا إلى أي جهة.",
       contactHeading: "اتصل بنا",
       footerNote: (name) => `سياسة الخصوصية لتطبيق ${name}، من نشر GNeurone AI.`,
     },
@@ -804,6 +813,9 @@ export const strings = {
       changesHeading: "Modificaciones",
       changesText:
         "Cualquier modificación de esta política se publicará en esta página, con una fecha de actualización. Un cambio importante se anunciará en las notas de versión de la aplicación.",
+      siteHeading: "Sobre este sitio web",
+      siteText:
+        "Este sitio cuenta sus páginas vistas con la herramienta integrada de nuestro alojamiento, Vercel Web Analytics. Sin cookies, sin identificador persistente, sin red publicitaria. Sabemos qué páginas se leen, nada sobre quién las lee. Las aplicaciones listadas arriba no están afectadas: no envían nada, a nadie.",
       contactHeading: "Contacto",
       footerNote: (name) => `Política de privacidad de ${name}, publicada por GNeurone AI.`,
     },
@@ -1008,6 +1020,9 @@ export const strings = {
       changesHeading: "Alterações",
       changesText:
         "Qualquer alteração a esta política será publicada nesta página, com uma data de atualização. Uma alteração importante será anunciada nas notas de versão da aplicação.",
+      siteHeading: "Sobre este site",
+      siteText:
+        "Este site conta as suas páginas vistas com a ferramenta integrada do nosso alojamento, Vercel Web Analytics. Sem cookies, sem identificador persistente, sem rede publicitária. Sabemos que páginas são lidas, nada sobre quem as lê. As aplicações listadas acima não são abrangidas: não enviam nada, a ninguém.",
       contactHeading: "Contacte-nos",
       footerNote: (name) => `Política de privacidade de ${name}, publicada pela GNeurone AI.`,
     },

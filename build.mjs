@@ -372,6 +372,9 @@ ${rows}
       </tbody>
     </table>
 
+    <h2>${p.siteHeading}</h2>
+    <p>${p.siteText}</p>
+
     <h2>${p.contactHeading}</h2>
     <p>${PUBLISHER} — <a href="mailto:${EMAIL}">${EMAIL}</a></p>
 
@@ -491,6 +494,12 @@ const checkContent = () => {
       const t = strings[locale];
       if (!t.apps[app.key]?.description) gaps.push(`strings.${locale}.apps.${app.key}.description`);
       if (!t.tags[app.tag]) gaps.push(`strings.${locale}.tags.${app.tag}`);
+    }
+  }
+
+  for (const locale of LOCALES) {
+    for (const key of ["siteHeading", "siteText"]) {
+      if (!strings[locale].privacy[key]) gaps.push(`strings.${locale}.privacy.${key}`);
     }
   }
 
