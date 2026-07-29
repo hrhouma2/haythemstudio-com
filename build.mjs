@@ -166,6 +166,7 @@ ${body}
 
   <script src="/assets/main.js" defer></script>
   ${body.includes("data-jellyfish") ? '<script src="/assets/jellyfish.js" defer></script>' : ""}
+  <script src="/_vercel/insights/script.js" defer></script>
 </body>
 </html>
 `;

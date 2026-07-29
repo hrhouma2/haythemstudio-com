@@ -75,6 +75,20 @@ Le cache est réglé sur un an en immuable dans `vercel.json` : remplacer une
 police impose de changer le nom du fichier, sinon les visiteurs garderont
 l'ancienne version.
 
+## Mesure d'audience
+
+Le site charge `/_vercel/insights/script.js`, le script de Vercel Web Analytics.
+Il est servi depuis le domaine lui-même, donc le site conserve sa propriété de
+n'émettre aucune requête vers un tiers. Pas de cookie, pas d'identifiant
+persistant, donc pas de bandeau de consentement.
+
+Le script n'existe qu'une fois Web Analytics activé dans le tableau de bord
+Vercel (onglet **Analytics**, bouton **Enable**). Tant que ce n'est pas fait, la
+balise renvoie un 404 silencieux, sans conséquence pour le reste de la page.
+
+Les chiffres se consultent sur vercel.com, pas sur le site : il n'y a
+volontairement aucune page publique de statistiques.
+
 ## La méduse du hero
 
 `assets/jellyfish.js` dessine la méduse en WebGL brut, sans aucune bibliothèque
