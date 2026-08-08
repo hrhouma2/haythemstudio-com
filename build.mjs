@@ -412,11 +412,17 @@ ${p.locationBoxItems.map((item) => `        <li>${item}</li>`).join("\n")}
 `
       : "";
 
-  const permissionRows =
-    app.permissions === "location"
-      ? `      <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td>${p.locationReason}</td></tr>
-      <tr><td><code>ACCESS_FINE_LOCATION</code></td><td>${p.locationReason}</td></tr>`
-      : `      <tr><td colspan="2">${p.noPermission}</td></tr>`;
+  // Le tableau suit la liste declaree dans apps.mjs, qui doit refleter le
+  // AndroidManifest a la lettre : Google compare les autorisations du bundle
+  // avec ce que la politique annonce, et une omission fait rejeter la fiche.
+  const permissionRows = app.permissions.length
+    ? app.permissions
+        .map(
+          (name) =>
+            `      <tr><td><code>${name}</code></td><td>${p.permissionReasons[name]}</td></tr>`
+        )
+        .join("\n")
+    : `      <tr><td colspan="2">${p.noPermission}</td></tr>`;
 
   return `${nav(locale, rest)}
 
@@ -494,6 +500,9 @@ const checkContent = () => {
       const t = strings[locale];
       if (!t.apps[app.key]?.description) gaps.push(`strings.${locale}.apps.${app.key}.description`);
       if (!t.tags[app.tag]) gaps.push(`strings.${locale}.tags.${app.tag}`);
+      for (const name of app.permissions) {
+        if (!t.privacy.permissionReasons[name]) gaps.push(`strings.${locale}.privacy.permissionReasons.${name}`);
+      }
     }
   }
 

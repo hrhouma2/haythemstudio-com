@@ -152,6 +152,10 @@
       <tr><th>Permission</th><th>Why</th></tr>
       <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td>Compute the Qibla direction and the prayer times for your location. The calculation is local; the position is never transmitted.</td></tr>
       <tr><td><code>ACCESS_FINE_LOCATION</code></td><td>Compute the Qibla direction and the prayer times for your location. The calculation is local; the position is never transmitted.</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Display the prayer reminders you have enabled. The notification is built on the device; no server is contacted.</td></tr>
+      <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Fire the reminder at the exact prayer time. Android only guarantees the minute with this permission; without it the reminder still arrives, but late.</td></tr>
+      <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Reprogram the reminders after the phone restarts. Android erases pending alarms on shutdown; without this they would silently stop.</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>Vibrate the phone at prayer time, if you chose that alert mode rather than sound.</td></tr>
     </table>
 
     <h2>Your rights</h2>

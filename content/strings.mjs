@@ -194,8 +194,20 @@ export const strings = {
       permissionCol: "Permission",
       reasonCol: "Why",
       noPermission: "No sensitive permission is requested.",
-      locationReason:
-        "Compute the Qibla direction and the prayer times for your location. The calculation is local; the position is never transmitted.",
+      permissionReasons: {
+        ACCESS_COARSE_LOCATION:
+          "Compute the Qibla direction and the prayer times for your location. The calculation is local; the position is never transmitted.",
+        ACCESS_FINE_LOCATION:
+          "Compute the Qibla direction and the prayer times for your location. The calculation is local; the position is never transmitted.",
+        POST_NOTIFICATIONS:
+          "Display the prayer reminders you have enabled. The notification is built on the device; no server is contacted.",
+        SCHEDULE_EXACT_ALARM:
+          "Fire the reminder at the exact prayer time. Android only guarantees the minute with this permission; without it the reminder still arrives, but late.",
+        RECEIVE_BOOT_COMPLETED:
+          "Reprogram the reminders after the phone restarts. Android erases pending alarms on shutdown; without this they would silently stop.",
+        VIBRATE:
+          "Vibrate the phone at prayer time, if you chose that alert mode rather than sound.",
+      },
       rightsHeading: "Your rights",
       rights1:
         "Since no personal data is collected by the publisher, there is nothing to consult, correct or delete on our side. You keep full control: clearing the data of the application in the Android settings removes everything it has stored.",
@@ -402,8 +414,20 @@ export const strings = {
       permissionCol: "Autorisation",
       reasonCol: "Pourquoi",
       noPermission: "Aucune autorisation sensible n’est demandée.",
-      locationReason:
-        "Calculer la direction de la Qibla et les horaires de prière pour votre position. Le calcul est local, la position n’est jamais transmise.",
+      permissionReasons: {
+        ACCESS_COARSE_LOCATION:
+          "Calculer la direction de la Qibla et les horaires de prière pour votre position. Le calcul est local, la position n’est jamais transmise.",
+        ACCESS_FINE_LOCATION:
+          "Calculer la direction de la Qibla et les horaires de prière pour votre position. Le calcul est local, la position n’est jamais transmise.",
+        POST_NOTIFICATIONS:
+          "Afficher les rappels de prière que vous avez activés. La notification est construite sur l’appareil, aucun serveur n’est contacté.",
+        SCHEDULE_EXACT_ALARM:
+          "Déclencher le rappel à l’heure exacte de la prière. Android ne garantit la minute qu’avec cette autorisation ; sans elle le rappel arrive quand même, mais en retard.",
+        RECEIVE_BOOT_COMPLETED:
+          "Reprogrammer les rappels après le redémarrage du téléphone. Android efface les alarmes en attente à l’extinction ; sans cela, elles cesseraient en silence.",
+        VIBRATE:
+          "Faire vibrer le téléphone à l’heure de la prière, si vous avez choisi ce mode d’alerte plutôt que le son.",
+      },
       rightsHeading: "Vos droits",
       rights1:
         "Puisque aucune donnée personnelle n’est collectée par l’éditeur, il n’y a rien à consulter, corriger ou effacer de notre côté. Vous gardez le contrôle total : effacer les données de l’application depuis les réglages Android supprime tout ce qu’elle a enregistré.",
@@ -596,7 +620,17 @@ export const strings = {
       permissionCol: "الإذن",
       reasonCol: "السبب",
       noPermission: "لا يُطلب أي إذن حسّاس.",
-      locationReason: "حساب اتجاه القبلة ومواقيت الصلاة لموقعك. الحساب محلي، ولا يُرسل الموقع أبدًا.",
+      permissionReasons: {
+        ACCESS_COARSE_LOCATION: "حساب اتجاه القبلة ومواقيت الصلاة لموقعك. الحساب محلي، ولا يُرسل الموقع أبدًا.",
+        ACCESS_FINE_LOCATION: "حساب اتجاه القبلة ومواقيت الصلاة لموقعك. الحساب محلي، ولا يُرسل الموقع أبدًا.",
+        POST_NOTIFICATIONS:
+          "عرض تنبيهات الصلاة التي فعّلتها. يُبنى التنبيه على الجهاز نفسه، ولا يُتصل بأي خادم.",
+        SCHEDULE_EXACT_ALARM:
+          "إطلاق التنبيه في وقت الصلاة بالضبط. لا يضمن أندرويد الدقيقة إلا بهذا الإذن؛ وبدونه يصل التنبيه لكن متأخرًا.",
+        RECEIVE_BOOT_COMPLETED:
+          "إعادة ضبط التنبيهات بعد إعادة تشغيل الهاتف. يمحو أندرويد المنبّهات المعلّقة عند الإطفاء، ولولا ذلك لتوقفت بصمت.",
+        VIBRATE: "اهتزاز الهاتف عند وقت الصلاة، إن اخترت هذا النمط بدل الصوت.",
+      },
       rightsHeading: "حقوقك",
       rights1:
         "بما أن الناشر لا يجمع أي بيانات شخصية، فلا يوجد لدينا ما يُطلع عليه أو يُصحَّح أو يُحذف. تبقى السيطرة الكاملة لك: مسح بيانات التطبيق من إعدادات أندرويد يحذف كل ما سجّله.",
@@ -803,8 +837,20 @@ export const strings = {
       permissionCol: "Permiso",
       reasonCol: "Por qué",
       noPermission: "No se solicita ningún permiso sensible.",
-      locationReason:
-        "Calcular la dirección de la Qibla y los horarios de oración para su posición. El cálculo es local y la posición nunca se transmite.",
+      permissionReasons: {
+        ACCESS_COARSE_LOCATION:
+          "Calcular la dirección de la Qibla y los horarios de oración para su posición. El cálculo es local y la posición nunca se transmite.",
+        ACCESS_FINE_LOCATION:
+          "Calcular la dirección de la Qibla y los horarios de oración para su posición. El cálculo es local y la posición nunca se transmite.",
+        POST_NOTIFICATIONS:
+          "Mostrar los recordatorios de oración que haya activado. La notificación se construye en el dispositivo y no se contacta ningún servidor.",
+        SCHEDULE_EXACT_ALARM:
+          "Lanzar el recordatorio a la hora exacta de la oración. Android solo garantiza el minuto con este permiso; sin él el recordatorio llega igualmente, pero tarde.",
+        RECEIVE_BOOT_COMPLETED:
+          "Reprogramar los recordatorios tras reiniciar el teléfono. Android borra las alarmas pendientes al apagarse; sin esto se detendrían en silencio.",
+        VIBRATE:
+          "Hacer vibrar el teléfono a la hora de la oración, si eligió ese modo de aviso en lugar del sonido.",
+      },
       rightsHeading: "Sus derechos",
       rights1:
         "Puesto que el editor no recoge ningún dato personal, no hay nada que consultar, corregir o eliminar por nuestra parte. Usted conserva el control total: borrar los datos de la aplicación desde los ajustes de Android elimina todo lo que haya guardado.",
@@ -1010,8 +1056,20 @@ export const strings = {
       permissionCol: "Permissão",
       reasonCol: "Porquê",
       noPermission: "Não é pedida qualquer permissão sensível.",
-      locationReason:
-        "Calcular a direção da Qibla e os horários de oração para a sua posição. O cálculo é local e a posição nunca é transmitida.",
+      permissionReasons: {
+        ACCESS_COARSE_LOCATION:
+          "Calcular a direção da Qibla e os horários de oração para a sua posição. O cálculo é local e a posição nunca é transmitida.",
+        ACCESS_FINE_LOCATION:
+          "Calcular a direção da Qibla e os horários de oração para a sua posição. O cálculo é local e a posição nunca é transmitida.",
+        POST_NOTIFICATIONS:
+          "Mostrar os lembretes de oração que ativou. A notificação é construída no aparelho e nenhum servidor é contactado.",
+        SCHEDULE_EXACT_ALARM:
+          "Disparar o lembrete à hora exata da oração. O Android só garante o minuto com esta permissão; sem ela o lembrete chega na mesma, mas atrasado.",
+        RECEIVE_BOOT_COMPLETED:
+          "Reprogramar os lembretes depois de reiniciar o telefone. O Android apaga os alarmes pendentes ao desligar; sem isto parariam em silêncio.",
+        VIBRATE:
+          "Fazer vibrar o telefone à hora da oração, se escolheu esse modo de aviso em vez do som.",
+      },
       rightsHeading: "Os seus direitos",
       rights1:
         "Uma vez que a editora não recolhe qualquer dado pessoal, não há nada para consultar, corrigir ou apagar do nosso lado. Mantém o controlo total: apagar os dados da aplicação nas definições Android remove tudo o que foi registado.",

@@ -152,6 +152,10 @@
       <tr><th>Permiso</th><th>Por qué</th></tr>
       <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td>Calcular la dirección de la Qibla y los horarios de oración para su posición. El cálculo es local y la posición nunca se transmite.</td></tr>
       <tr><td><code>ACCESS_FINE_LOCATION</code></td><td>Calcular la dirección de la Qibla y los horarios de oración para su posición. El cálculo es local y la posición nunca se transmite.</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Mostrar los recordatorios de oración que haya activado. La notificación se construye en el dispositivo y no se contacta ningún servidor.</td></tr>
+      <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Lanzar el recordatorio a la hora exacta de la oración. Android solo garantiza el minuto con este permiso; sin él el recordatorio llega igualmente, pero tarde.</td></tr>
+      <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Reprogramar los recordatorios tras reiniciar el teléfono. Android borra las alarmas pendientes al apagarse; sin esto se detendrían en silencio.</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>Hacer vibrar el teléfono a la hora de la oración, si eligió ese modo de aviso en lugar del sonido.</td></tr>
     </table>
 
     <h2>Sus derechos</h2>

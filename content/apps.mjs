@@ -1,4 +1,4 @@
-export const SITE_URL = "https://haythemstudio.com";
+﻿export const SITE_URL = "https://haythemstudio.com";
 export const EMAIL = "rehoumahaythem@gmail.com";
 export const PUBLISHER = "GNeurone AI";
 
@@ -27,7 +27,14 @@ export const apps = [
     accent: "#f5c46b",
     featured: true,
     tag: "lifestyle",
-    permissions: "location",
+    permissions: [
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "POST_NOTIFICATIONS",
+      "SCHEDULE_EXACT_ALARM",
+      "RECEIVE_BOOT_COMPLETED",
+      "VIBRATE",
+    ],
     storage: "qibla",
     extra: "qibla",
   },
@@ -39,7 +46,7 @@ export const apps = [
     pkg: "com.haythemstudio.motsmeles",
     accent: "#3ddc97",
     tag: "words",
-    permissions: "none",
+    permissions: [],
     storage: "game",
   },
   {
@@ -51,7 +58,7 @@ export const apps = [
     accent: "#4cc9f0",
     tag: "puzzle",
     levels: 60,
-    permissions: "none",
+    permissions: [],
     storage: "game",
   },
   {
@@ -63,7 +70,7 @@ export const apps = [
     accent: "#3ddc97",
     tag: "collection",
     levels: 15,
-    permissions: "none",
+    permissions: [],
     storage: "game",
   },
   {
@@ -75,7 +82,7 @@ export const apps = [
     accent: "#4cc9f0",
     tag: "minimal",
     levels: 45,
-    permissions: "none",
+    permissions: [],
     storage: "game",
   },
 ];
