@@ -1,6 +1,6 @@
 ﻿export const SITE_URL = "https://haythemstudio.com";
 export const EMAIL = "rehoumahaythem@gmail.com";
-export const PUBLISHER = "GNeurone AI";
+export const PUBLISHER = "Haythem Studio";
 
 export const LOCALES = ["en", "fr", "ar", "es", "pt"];
 export const DEFAULT_LOCALE = "en";

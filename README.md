@@ -1,6 +1,6 @@
 # haythemstudio.com
 
-Site vitrine et politiques de confidentialité des applications Android **GNeurone AI**.
+Site vitrine et politiques de confidentialité des applications Android **Haythem Studio**.
 Cinq langues : anglais (langue principale), français, arabe, espagnol, portugais.
 
 ## Structure

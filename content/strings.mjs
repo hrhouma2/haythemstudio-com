@@ -7,11 +7,11 @@ export const strings = {
   /* ------------------------------------------------------------------ EN */
   en: {
     colon: ": ",
-    updated: "27 July 2026",
+    updated: "13 August 2026",
     home: {
       title: "Haythem Studio — Android games and tools that work offline",
       description:
-        "Android games and tools by GNeurone AI: a parking puzzle, a connect-the-dots grid, arcade classics, an Arabic word search, a Qibla compass and more. They open in a second and keep working without a signal.",
+        "Android games and tools by Haythem Studio: a parking puzzle, a connect-the-dots grid, arcade classics, an Arabic word search, a Qibla compass and more. They open in a second and keep working without a signal.",
       ogDescription: "Android apps that open in a second and keep working without a signal.",
     },
     nav: {
@@ -30,7 +30,7 @@ export const strings = {
       line2: "just work,",
       line3: "even offline.",
       lede:
-        "Haythem Studio makes Android apps that open in a second and keep going without a signal. Puzzle games and everyday tools, published by GNeurone AI and fully unlocked from the first launch.",
+        "Haythem Studio makes Android apps that open in a second and keep going without a signal. Puzzle games and everyday tools, fully unlocked from the first launch.",
       ctaPrimary: "Browse the apps",
       ctaSecondary: "Our privacy promise",
       statApps: "Apps on Google Play",
@@ -45,13 +45,13 @@ export const strings = {
       "Private by design",
       "Fully unlocked",
       "Arabic · French · English",
-      "Published by GNeurone AI",
+      "Published by Haythem Studio",
     ],
     catalogue: {
       eyebrow: "The catalogue",
       title: "Pick your next puzzle",
       lede:
-        "Games and everyday companions, and the list keeps growing. Each one is published under the GNeurone AI account and runs entirely on your device.",
+        "Games and everyday companions, and the list keeps growing. Each one is published under the Haythem Studio account and runs entirely on your device.",
       cardLink: "Privacy",
     },
     principles: {
@@ -63,7 +63,7 @@ export const strings = {
         {
           title: "Everything stays with you",
           text:
-            "Scores, settings and progress live in the private storage of the app. Nothing travels to GNeurone AI, so there is nothing to leak.",
+            "Scores, settings and progress live in the private storage of the app. Nothing travels to Haythem Studio, so there is nothing to leak.",
         },
         {
           title: "Straight into the game",
@@ -84,11 +84,11 @@ export const strings = {
     },
     contact: {
       title: "Talk to the studio",
-      lede: "Bug reports, ideas and questions go straight to GNeurone AI, at the address published on every privacy policy.",
+      lede: "Bug reports, ideas and questions go straight to Haythem Studio, at the address published on every privacy policy.",
       button: "Send an email",
     },
     footer: {
-      rights: "© 2026 Haythem Studio · Publisher GNeurone AI",
+      rights: "© 2026 Haythem Studio · Montréal, Québec",
       policies: "Privacy policies",
       updated: "Last updated",
     },
@@ -127,12 +127,12 @@ export const strings = {
       },
     },
     privacy: {
-      indexTitle: "Privacy policies — GNeurone AI",
+      indexTitle: "Privacy policies — Haythem Studio",
       indexDescription:
-        "Privacy policies of the Android applications published by GNeurone AI on Google Play.",
-      indexHeading: "Privacy policies — GNeurone AI",
+        "Privacy policies of the Android applications published by Haythem Studio on Google Play.",
+      indexHeading: "Privacy policies — Haythem Studio",
       indexMeta1: "Privacy policies",
-      indexMeta2: "Android applications published by GNeurone AI on Google Play",
+      indexMeta2: "Android applications published by Haythem Studio on Google Play",
       indexIntro:
         "None of these applications collects personal data, creates an account, displays advertising or offers in-app purchases. Each page below details what is stored on the device and which permissions are requested.",
       tableApp: "Application",
@@ -141,9 +141,9 @@ export const strings = {
       backPolicies: "← All policies",
       pageTitle: (name) => `Privacy policy — ${name}`,
       pageDescription: (name, pkg) =>
-        `Privacy policy of ${name} (${pkg}), published by GNeurone AI.`,
+        `Privacy policy of ${name} (${pkg}), published by Haythem Studio.`,
       heading: "Privacy policy",
-      publisherLine: "Publisher: GNeurone AI",
+      publisherLine: "Publisher: Haythem Studio",
       updatedLine: "Last updated",
       oneSentenceHeading: "In one sentence",
       oneSentence:
@@ -220,18 +220,18 @@ export const strings = {
       siteText:
         "This website counts its page views with the tool built into our host, Vercel Web Analytics. No cookie, no persistent identifier, no advertising network. It tells us which pages are read, nothing about who reads them. The applications listed above are not concerned: they send nothing, to anyone.",
       contactHeading: "Contact us",
-      footerNote: (name) => `Privacy policy of ${name}, published by GNeurone AI.`,
+      footerNote: (name) => `Privacy policy of ${name}, published by Haythem Studio.`,
     },
   },
 
   /* ------------------------------------------------------------------ FR */
   fr: {
     colon: " : ",
-    updated: "27 juillet 2026",
+    updated: "13 août 2026",
     home: {
       title: "Haythem Studio — Des jeux et outils Android qui marchent hors ligne",
       description:
-        "Jeux et outils Android édités par GNeurone AI : casse-tête de parking, grille de pastilles à relier, classiques d’arcade, mots mêlés arabes, boussole Qibla et d’autres encore. Ils s’ouvrent en une seconde et continuent sans réseau.",
+        "Jeux et outils Android édités par Haythem Studio : casse-tête de parking, grille de pastilles à relier, classiques d’arcade, mots mêlés arabes, boussole Qibla et d’autres encore. Ils s’ouvrent en une seconde et continuent sans réseau.",
       ogDescription: "Des applications Android qui s’ouvrent en une seconde et continuent sans réseau.",
     },
     nav: {
@@ -250,7 +250,7 @@ export const strings = {
       line2: "fonctionnent",
       line3: "hors ligne.",
       lede:
-        "Haythem Studio conçoit des applications Android qui s’ouvrent en une seconde et continuent sans réseau. Des casse-têtes et des outils du quotidien, édités par GNeurone AI et débloqués dès le premier lancement.",
+        "Haythem Studio conçoit des applications Android qui s’ouvrent en une seconde et continuent sans réseau. Des casse-têtes et des outils du quotidien, débloqués dès le premier lancement.",
       ctaPrimary: "Voir les applications",
       ctaSecondary: "Notre engagement",
       statApps: "Applications sur Google Play",
@@ -265,13 +265,13 @@ export const strings = {
       "Privé par conception",
       "Entièrement débloqué",
       "Arabe · Français · Anglais",
-      "Édité par GNeurone AI",
+      "Édité par Haythem Studio",
     ],
     catalogue: {
       eyebrow: "Le catalogue",
       title: "Choisissez votre prochain casse-tête",
       lede:
-        "Des jeux et des compagnons du quotidien, et la liste s’allonge. Chacun est publié sous le compte GNeurone AI et tourne intégralement sur votre appareil.",
+        "Des jeux et des compagnons du quotidien, et la liste s’allonge. Chacun est publié sous le compte Haythem Studio et tourne intégralement sur votre appareil.",
       cardLink: "Confidentialité",
     },
     principles: {
@@ -283,7 +283,7 @@ export const strings = {
         {
           title: "Tout reste chez vous",
           text:
-            "Scores, réglages et progression vivent dans l’espace privé de l’application. Rien ne part vers GNeurone AI, donc il n’y a rien à faire fuiter.",
+            "Scores, réglages et progression vivent dans l’espace privé de l’application. Rien ne part vers Haythem Studio, donc il n’y a rien à faire fuiter.",
         },
         {
           title: "Directement dans le jeu",
@@ -304,11 +304,11 @@ export const strings = {
     },
     contact: {
       title: "Écrire au studio",
-      lede: "Signalements, idées et questions arrivent directement chez GNeurone AI, à l’adresse publiée sur chaque politique de confidentialité.",
+      lede: "Signalements, idées et questions arrivent directement chez Haythem Studio, à l’adresse publiée sur chaque politique de confidentialité.",
       button: "Écrire un e-mail",
     },
     footer: {
-      rights: "© 2026 Haythem Studio · Éditeur GNeurone AI",
+      rights: "© 2026 Haythem Studio · Montréal, Québec",
       policies: "Politiques de confidentialité",
       updated: "Dernière mise à jour",
     },
@@ -347,12 +347,12 @@ export const strings = {
       },
     },
     privacy: {
-      indexTitle: "Politiques de confidentialité — GNeurone AI",
+      indexTitle: "Politiques de confidentialité — Haythem Studio",
       indexDescription:
-        "Politiques de confidentialité des applications Android publiées par GNeurone AI sur Google Play.",
-      indexHeading: "Politiques de confidentialité — GNeurone AI",
+        "Politiques de confidentialité des applications Android publiées par Haythem Studio sur Google Play.",
+      indexHeading: "Politiques de confidentialité — Haythem Studio",
       indexMeta1: "Politiques de confidentialité",
-      indexMeta2: "Applications Android publiées par GNeurone AI sur Google Play",
+      indexMeta2: "Applications Android publiées par Haythem Studio sur Google Play",
       indexIntro:
         "Aucune de ces applications ne collecte de donnée personnelle, ne crée de compte, n’affiche de publicité ni ne propose d’achat intégré. Chaque page ci-dessous détaille ce qui est enregistré sur l’appareil et les autorisations demandées.",
       tableApp: "Application",
@@ -361,9 +361,9 @@ export const strings = {
       backPolicies: "← Toutes les politiques",
       pageTitle: (name) => `Politique de confidentialité — ${name}`,
       pageDescription: (name, pkg) =>
-        `Politique de confidentialité de ${name} (${pkg}), éditée par GNeurone AI.`,
+        `Politique de confidentialité de ${name} (${pkg}), éditée par Haythem Studio.`,
       heading: "Politique de confidentialité",
-      publisherLine: "Éditeur : GNeurone AI",
+      publisherLine: "Éditeur : Haythem Studio",
       updatedLine: "Dernière mise à jour",
       oneSentenceHeading: "En une phrase",
       oneSentence:
@@ -440,18 +440,18 @@ export const strings = {
       siteText:
         "Ce site compte ses pages vues avec l’outil intégré à notre hébergeur, Vercel Web Analytics. Aucun cookie, aucun identifiant persistant, aucune régie publicitaire. Nous savons quelles pages sont lues, rien sur les personnes qui les lisent. Les applications listées ci-dessus ne sont pas concernées : elles n’envoient rien, à personne.",
       contactHeading: "Nous contacter",
-      footerNote: (name) => `Politique de confidentialité de ${name}, éditée par GNeurone AI.`,
+      footerNote: (name) => `Politique de confidentialité de ${name}, éditée par Haythem Studio.`,
     },
   },
 
   /* ------------------------------------------------------------------ AR */
   ar: {
     colon: ": ",
-    updated: "٢٧ يوليو ٢٠٢٦",
+    updated: "١٣ أغسطس ٢٠٢٦",
     home: {
       title: "Haythem Studio — ألعاب وأدوات أندرويد تعمل دون إنترنت",
       description:
-        "ألعاب وأدوات أندرويد من GNeurone AI: لغز مواقف السيارات، وصل النقاط في شبكة، كلاسيكيات الأركيد، بحث عن الكلمات بالعربية، بوصلة القبلة وغيرها. تفتح في ثانية وتواصل العمل دون شبكة.",
+        "ألعاب وأدوات أندرويد من Haythem Studio: لغز مواقف السيارات، وصل النقاط في شبكة، كلاسيكيات الأركيد، بحث عن الكلمات بالعربية، بوصلة القبلة وغيرها. تفتح في ثانية وتواصل العمل دون شبكة.",
       ogDescription: "تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة.",
     },
     nav: {
@@ -470,7 +470,7 @@ export const strings = {
       line2: "تعمل ببساطة،",
       line3: "حتى دون إنترنت.",
       lede:
-        "يصنع Haythem Studio تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة. ألعاب ألغاز وأدوات يومية، تنشرها GNeurone AI ومفتوحة بالكامل منذ التشغيل الأول.",
+        "يصنع Haythem Studio تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة. ألعاب ألغاز وأدوات يومية، مفتوحة بالكامل منذ التشغيل الأول.",
       ctaPrimary: "تصفّح التطبيقات",
       ctaSecondary: "التزامنا بالخصوصية",
       statApps: "تطبيقات على Google Play",
@@ -485,12 +485,12 @@ export const strings = {
       "خاص بالتصميم",
       "مفتوح بالكامل",
       "العربية · الفرنسية · الإنجليزية",
-      "من نشر GNeurone AI",
+      "من نشر Haythem Studio",
     ],
     catalogue: {
       eyebrow: "القائمة",
       title: "اختر لغزك التالي",
-      lede: "ألعاب ورفاق للاستعمال اليومي، والقائمة تطول. كلها منشورة تحت حساب GNeurone AI وتعمل بالكامل على جهازك.",
+      lede: "ألعاب ورفاق للاستعمال اليومي، والقائمة تطول. كلها منشورة تحت حساب Haythem Studio وتعمل بالكامل على جهازك.",
       cardLink: "الخصوصية",
     },
     principles: {
@@ -500,7 +500,7 @@ export const strings = {
       items: [
         {
           title: "كل شيء يبقى عندك",
-          text: "النتائج والإعدادات والتقدّم تعيش في المساحة الخاصة بالتطبيق. لا شيء يذهب إلى GNeurone AI، فلا شيء هناك ليُسرَّب.",
+          text: "النتائج والإعدادات والتقدّم تعيش في المساحة الخاصة بالتطبيق. لا شيء يذهب إلى Haythem Studio، فلا شيء هناك ليُسرَّب.",
         },
         {
           title: "مباشرة إلى اللعب",
@@ -518,11 +518,11 @@ export const strings = {
     },
     contact: {
       title: "راسل الاستوديو",
-      lede: "البلاغات والأفكار والأسئلة تصل مباشرة إلى GNeurone AI، على العنوان المنشور في كل سياسة خصوصية.",
+      lede: "البلاغات والأفكار والأسئلة تصل مباشرة إلى Haythem Studio، على العنوان المنشور في كل سياسة خصوصية.",
       button: "أرسل بريدًا إلكترونيًا",
     },
     footer: {
-      rights: "© 2026 Haythem Studio · الناشر GNeurone AI",
+      rights: "© 2026 Haythem Studio · مونتريال، كيبك",
       policies: "سياسات الخصوصية",
       updated: "آخر تحديث",
     },
@@ -559,11 +559,11 @@ export const strings = {
       },
     },
     privacy: {
-      indexTitle: "سياسات الخصوصية — GNeurone AI",
-      indexDescription: "سياسات الخصوصية لتطبيقات أندرويد التي تنشرها GNeurone AI على Google Play.",
-      indexHeading: "سياسات الخصوصية — GNeurone AI",
+      indexTitle: "سياسات الخصوصية — Haythem Studio",
+      indexDescription: "سياسات الخصوصية لتطبيقات أندرويد التي تنشرها Haythem Studio على Google Play.",
+      indexHeading: "سياسات الخصوصية — Haythem Studio",
       indexMeta1: "سياسات الخصوصية",
-      indexMeta2: "تطبيقات أندرويد منشورة من GNeurone AI على Google Play",
+      indexMeta2: "تطبيقات أندرويد منشورة من Haythem Studio على Google Play",
       indexIntro:
         "لا يجمع أي من هذه التطبيقات بيانات شخصية، ولا ينشئ حسابًا، ولا يعرض إعلانات، ولا يقدّم شراءً داخل التطبيق. توضّح كل صفحة أدناه ما يُحفظ على الجهاز والأذونات المطلوبة.",
       tableApp: "التطبيق",
@@ -571,9 +571,9 @@ export const strings = {
       backHome: "→ Haythem Studio",
       backPolicies: "→ كل السياسات",
       pageTitle: (name) => `سياسة الخصوصية — ${name}`,
-      pageDescription: (name, pkg) => `سياسة الخصوصية لتطبيق ${name} (${pkg})، من نشر GNeurone AI.`,
+      pageDescription: (name, pkg) => `سياسة الخصوصية لتطبيق ${name} (${pkg})، من نشر Haythem Studio.`,
       heading: "سياسة الخصوصية",
-      publisherLine: "الناشر: GNeurone AI",
+      publisherLine: "الناشر: Haythem Studio",
       updatedLine: "آخر تحديث",
       oneSentenceHeading: "في جملة واحدة",
       oneSentence: "لا يجمع هذا التطبيق أي بيانات شخصية، ولا ينشئ أي حساب، ولا يرسل شيئًا إلى أي خادم يخصّنا.",
@@ -643,18 +643,18 @@ export const strings = {
       siteText:
         "يحصي هذا الموقع صفحاته المشاهَدة بأداة Vercel Web Analytics المدمجة في خدمة الاستضافة. لا ملفات تعريف ارتباط، ولا معرّف دائم، ولا شبكة إعلانات. نعرف أي الصفحات تُقرأ، ولا نعرف شيئًا عمّن يقرؤها. أما التطبيقات المذكورة أعلاه فغير معنية: فهي لا ترسل شيئًا إلى أي جهة.",
       contactHeading: "اتصل بنا",
-      footerNote: (name) => `سياسة الخصوصية لتطبيق ${name}، من نشر GNeurone AI.`,
+      footerNote: (name) => `سياسة الخصوصية لتطبيق ${name}، من نشر Haythem Studio.`,
     },
   },
 
   /* ------------------------------------------------------------------ ES */
   es: {
     colon: ": ",
-    updated: "27 de julio de 2026",
+    updated: "13 de agosto de 2026",
     home: {
       title: "Haythem Studio — Juegos y utilidades Android que funcionan sin conexión",
       description:
-        "Juegos y utilidades Android de GNeurone AI: rompecabezas de aparcamiento, unir puntos en una cuadrícula, clásicos de arcade, sopa de letras en árabe, brújula Qibla y más. Se abren en un segundo y siguen funcionando sin cobertura.",
+        "Juegos y utilidades Android de Haythem Studio: rompecabezas de aparcamiento, unir puntos en una cuadrícula, clásicos de arcade, sopa de letras en árabe, brújula Qibla y más. Se abren en un segundo y siguen funcionando sin cobertura.",
       ogDescription: "Aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura.",
     },
     nav: {
@@ -673,7 +673,7 @@ export const strings = {
       line2: "funcionan",
       line3: "sin conexión.",
       lede:
-        "Haythem Studio crea aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura. Rompecabezas y utilidades del día a día, publicados por GNeurone AI y desbloqueados desde el primer arranque.",
+        "Haythem Studio crea aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura. Rompecabezas y utilidades del día a día, desbloqueados desde el primer arranque.",
       ctaPrimary: "Ver las aplicaciones",
       ctaSecondary: "Nuestro compromiso",
       statApps: "Aplicaciones en Google Play",
@@ -688,13 +688,13 @@ export const strings = {
       "Privado por diseño",
       "Todo desbloqueado",
       "Árabe · Francés · Inglés",
-      "Publicado por GNeurone AI",
+      "Publicado por Haythem Studio",
     ],
     catalogue: {
       eyebrow: "El catálogo",
       title: "Elija su próximo rompecabezas",
       lede:
-        "Juegos y compañeros para el día a día, y la lista sigue creciendo. Cada uno se publica bajo la cuenta de GNeurone AI y funciona íntegramente en su dispositivo.",
+        "Juegos y compañeros para el día a día, y la lista sigue creciendo. Cada uno se publica bajo la cuenta de Haythem Studio y funciona íntegramente en su dispositivo.",
       cardLink: "Privacidad",
     },
     principles: {
@@ -706,7 +706,7 @@ export const strings = {
         {
           title: "Todo se queda con usted",
           text:
-            "Puntuaciones, ajustes y progreso viven en el espacio privado de la aplicación. Nada viaja hasta GNeurone AI, así que no hay nada que filtrar.",
+            "Puntuaciones, ajustes y progreso viven en el espacio privado de la aplicación. Nada viaja hasta Haythem Studio, así que no hay nada que filtrar.",
         },
         {
           title: "Directo al juego",
@@ -727,11 +727,11 @@ export const strings = {
     },
     contact: {
       title: "Escribir al estudio",
-      lede: "Errores, ideas y preguntas llegan directamente a GNeurone AI, a la dirección publicada en cada política de privacidad.",
+      lede: "Errores, ideas y preguntas llegan directamente a Haythem Studio, a la dirección publicada en cada política de privacidad.",
       button: "Enviar un correo",
     },
     footer: {
-      rights: "© 2026 Haythem Studio · Editor GNeurone AI",
+      rights: "© 2026 Haythem Studio · Montreal, Quebec",
       policies: "Políticas de privacidad",
       updated: "Última actualización",
     },
@@ -770,12 +770,12 @@ export const strings = {
       },
     },
     privacy: {
-      indexTitle: "Políticas de privacidad — GNeurone AI",
+      indexTitle: "Políticas de privacidad — Haythem Studio",
       indexDescription:
-        "Políticas de privacidad de las aplicaciones Android publicadas por GNeurone AI en Google Play.",
-      indexHeading: "Políticas de privacidad — GNeurone AI",
+        "Políticas de privacidad de las aplicaciones Android publicadas por Haythem Studio en Google Play.",
+      indexHeading: "Políticas de privacidad — Haythem Studio",
       indexMeta1: "Políticas de privacidad",
-      indexMeta2: "Aplicaciones Android publicadas por GNeurone AI en Google Play",
+      indexMeta2: "Aplicaciones Android publicadas por Haythem Studio en Google Play",
       indexIntro:
         "Ninguna de estas aplicaciones recoge datos personales, crea una cuenta, muestra publicidad ni ofrece compras integradas. Cada página siguiente detalla lo que se guarda en el dispositivo y qué permisos se solicitan.",
       tableApp: "Aplicación",
@@ -784,9 +784,9 @@ export const strings = {
       backPolicies: "← Todas las políticas",
       pageTitle: (name) => `Política de privacidad — ${name}`,
       pageDescription: (name, pkg) =>
-        `Política de privacidad de ${name} (${pkg}), publicada por GNeurone AI.`,
+        `Política de privacidad de ${name} (${pkg}), publicada por Haythem Studio.`,
       heading: "Política de privacidad",
-      publisherLine: "Editor: GNeurone AI",
+      publisherLine: "Editor: Haythem Studio",
       updatedLine: "Última actualización",
       oneSentenceHeading: "En una frase",
       oneSentence:
@@ -863,18 +863,18 @@ export const strings = {
       siteText:
         "Este sitio cuenta sus páginas vistas con la herramienta integrada de nuestro alojamiento, Vercel Web Analytics. Sin cookies, sin identificador persistente, sin red publicitaria. Sabemos qué páginas se leen, nada sobre quién las lee. Las aplicaciones listadas arriba no están afectadas: no envían nada, a nadie.",
       contactHeading: "Contacto",
-      footerNote: (name) => `Política de privacidad de ${name}, publicada por GNeurone AI.`,
+      footerNote: (name) => `Política de privacidad de ${name}, publicada por Haythem Studio.`,
     },
   },
 
   /* ------------------------------------------------------------------ PT */
   pt: {
     colon: ": ",
-    updated: "27 de julho de 2026",
+    updated: "13 de agosto de 2026",
     home: {
       title: "Haythem Studio — Jogos e utilitários Android que funcionam offline",
       description:
-        "Jogos e utilitários Android da GNeurone AI: quebra-cabeças de estacionamento, ligar pontos numa grelha, clássicos de arcade, caça-palavras em árabe, bússola Qibla e mais. Abrem num segundo e continuam sem rede.",
+        "Jogos e utilitários Android da Haythem Studio: quebra-cabeças de estacionamento, ligar pontos numa grelha, clássicos de arcade, caça-palavras em árabe, bússola Qibla e mais. Abrem num segundo e continuam sem rede.",
       ogDescription: "Aplicações Android que abrem num segundo e continuam sem rede.",
     },
     nav: {
@@ -893,7 +893,7 @@ export const strings = {
       line2: "funcionam,",
       line3: "até offline.",
       lede:
-        "A Haythem Studio cria aplicações Android que abrem num segundo e continuam sem rede. Quebra-cabeças e utilitários do dia a dia, publicados pela GNeurone AI e desbloqueados desde o primeiro arranque.",
+        "A Haythem Studio cria aplicações Android que abrem num segundo e continuam sem rede. Quebra-cabeças e utilitários do dia a dia, desbloqueados desde o primeiro arranque.",
       ctaPrimary: "Ver as aplicações",
       ctaSecondary: "O nosso compromisso",
       statApps: "Aplicações no Google Play",
@@ -908,13 +908,13 @@ export const strings = {
       "Privado por conceção",
       "Tudo desbloqueado",
       "Árabe · Francês · Inglês",
-      "Publicado pela GNeurone AI",
+      "Publicado pela Haythem Studio",
     ],
     catalogue: {
       eyebrow: "O catálogo",
       title: "Escolha o seu próximo quebra-cabeças",
       lede:
-        "Jogos e companheiros para o dia a dia, e a lista continua a crescer. Cada um é publicado sob a conta da GNeurone AI e funciona inteiramente no seu aparelho.",
+        "Jogos e companheiros para o dia a dia, e a lista continua a crescer. Cada um é publicado sob a conta da Haythem Studio e funciona inteiramente no seu aparelho.",
       cardLink: "Privacidade",
     },
     principles: {
@@ -925,7 +925,7 @@ export const strings = {
         {
           title: "Tudo fica consigo",
           text:
-            "Pontuações, definições e progresso vivem no espaço privado da aplicação. Nada viaja até à GNeurone AI, por isso não há nada para vazar.",
+            "Pontuações, definições e progresso vivem no espaço privado da aplicação. Nada viaja até à Haythem Studio, por isso não há nada para vazar.",
         },
         {
           title: "Direto para o jogo",
@@ -946,11 +946,11 @@ export const strings = {
     },
     contact: {
       title: "Escrever ao estúdio",
-      lede: "Relatos de erros, ideias e perguntas chegam diretamente à GNeurone AI, no endereço publicado em cada política de privacidade.",
+      lede: "Relatos de erros, ideias e perguntas chegam diretamente à Haythem Studio, no endereço publicado em cada política de privacidade.",
       button: "Enviar um e-mail",
     },
     footer: {
-      rights: "© 2026 Haythem Studio · Editora GNeurone AI",
+      rights: "© 2026 Haythem Studio · Montreal, Quebec",
       policies: "Políticas de privacidade",
       updated: "Última atualização",
     },
@@ -989,12 +989,12 @@ export const strings = {
       },
     },
     privacy: {
-      indexTitle: "Políticas de privacidade — GNeurone AI",
+      indexTitle: "Políticas de privacidade — Haythem Studio",
       indexDescription:
-        "Políticas de privacidade das aplicações Android publicadas pela GNeurone AI no Google Play.",
-      indexHeading: "Políticas de privacidade — GNeurone AI",
+        "Políticas de privacidade das aplicações Android publicadas pela Haythem Studio no Google Play.",
+      indexHeading: "Políticas de privacidade — Haythem Studio",
       indexMeta1: "Políticas de privacidade",
-      indexMeta2: "Aplicações Android publicadas pela GNeurone AI no Google Play",
+      indexMeta2: "Aplicações Android publicadas pela Haythem Studio no Google Play",
       indexIntro:
         "Nenhuma destas aplicações recolhe dados pessoais, cria uma conta, mostra publicidade ou oferece compras no aplicativo. Cada página abaixo detalha o que é guardado no aparelho e que permissões são pedidas.",
       tableApp: "Aplicação",
@@ -1003,9 +1003,9 @@ export const strings = {
       backPolicies: "← Todas as políticas",
       pageTitle: (name) => `Política de privacidade — ${name}`,
       pageDescription: (name, pkg) =>
-        `Política de privacidade de ${name} (${pkg}), publicada pela GNeurone AI.`,
+        `Política de privacidade de ${name} (${pkg}), publicada pela Haythem Studio.`,
       heading: "Política de privacidade",
-      publisherLine: "Editora: GNeurone AI",
+      publisherLine: "Editora: Haythem Studio",
       updatedLine: "Última atualização",
       oneSentenceHeading: "Numa frase",
       oneSentence:
@@ -1082,7 +1082,7 @@ export const strings = {
       siteText:
         "Este site conta as suas páginas vistas com a ferramenta integrada do nosso alojamento, Vercel Web Analytics. Sem cookies, sem identificador persistente, sem rede publicitária. Sabemos que páginas são lidas, nada sobre quem as lê. As aplicações listadas acima não são abrangidas: não enviam nada, a ninguém.",
       contactHeading: "Contacte-nos",
-      footerNote: (name) => `Política de privacidade de ${name}, publicada pela GNeurone AI.`,
+      footerNote: (name) => `Política de privacidade de ${name}, publicada pela Haythem Studio.`,
     },
   },
 };
