@@ -11,7 +11,7 @@ export const strings = {
     home: {
       title: "Haythem Studio — Android games and tools that work offline",
       description:
-        "Android games and tools by GNeurone AI: a parking puzzle, one-line drawing, arcade classics, an Arabic word search, a Qibla compass and more. They open in a second and keep working without a signal.",
+        "Android games and tools by GNeurone AI: a parking puzzle, a connect-the-dots grid, arcade classics, an Arabic word search, a Qibla compass and more. They open in a second and keep working without a signal.",
       ogDescription: "Android apps that open in a second and keep working without a signal.",
     },
     nav: {
@@ -116,14 +116,14 @@ export const strings = {
           "Sixty levels of gridlock to untangle. Each one was solved by computer before shipping, so the optimal move count is known — beat it if you can.",
       },
       arcade: {
-        tagline: "Collection of fifteen puzzles",
+        tagline: "Collection of thirteen puzzles",
         description:
-          "Fifteen classics in one app: bottle sort, 2048, sliding puzzle, Hanoi, snake and ten more. One icon on your home screen, an evening of games behind it.",
+          "Thirteen classics in one app: bottle sort, 2048, sliding puzzle, Hanoi, snake and eight more. One icon on your home screen, an evening of games behind it.",
       },
       oneline: {
-        tagline: "One-stroke drawing puzzle",
+        tagline: "Connect the dots, fill the grid",
         description:
-          "Forty-five shapes to draw without lifting your finger, each verified as solvable before publication. Not a word of text, so it plays in any language.",
+          "Link each pair of dots and leave no empty cell. Grids generated endlessly, solvable by construction. Not a word of text, so it plays in any language.",
       },
     },
     privacy: {
@@ -231,7 +231,7 @@ export const strings = {
     home: {
       title: "Haythem Studio — Des jeux et outils Android qui marchent hors ligne",
       description:
-        "Jeux et outils Android édités par GNeurone AI : casse-tête de parking, tracé en un trait, classiques d’arcade, mots mêlés arabes, boussole Qibla et d’autres encore. Ils s’ouvrent en une seconde et continuent sans réseau.",
+        "Jeux et outils Android édités par GNeurone AI : casse-tête de parking, grille de pastilles à relier, classiques d’arcade, mots mêlés arabes, boussole Qibla et d’autres encore. Ils s’ouvrent en une seconde et continuent sans réseau.",
       ogDescription: "Des applications Android qui s’ouvrent en une seconde et continuent sans réseau.",
     },
     nav: {
@@ -336,14 +336,14 @@ export const strings = {
           "Soixante embouteillages à démêler. Chacun a été résolu par ordinateur avant publication : le nombre de coups optimal est connu, à vous de l’égaler.",
       },
       arcade: {
-        tagline: "Collection de quinze casse-têtes",
+        tagline: "Collection de treize casse-têtes",
         description:
-          "Quinze classiques dans une seule application : tri de flacons, 2048, taquin, Hanoï, serpent et dix autres. Une icône sur l’écran d’accueil, une soirée de jeu derrière.",
+          "Treize classiques dans une seule application : tri de flacons, 2048, taquin, Hanoï, serpent et huit autres. Une icône sur l’écran d’accueil, une soirée de jeu derrière.",
       },
       oneline: {
-        tagline: "Puzzle de tracé en un seul trait",
+        tagline: "Relier les pastilles, remplir la grille",
         description:
-          "Quarante-cinq figures à tracer sans lever le doigt, toutes vérifiées comme résolubles avant publication. Pas un mot de texte, donc jouable dans toutes les langues.",
+          "Relier chaque paire de pastilles sans laisser une case vide. Des grilles générées sans fin, résolubles par construction. Pas un mot de texte, donc jouable dans toutes les langues.",
       },
     },
     privacy: {
@@ -451,7 +451,7 @@ export const strings = {
     home: {
       title: "Haythem Studio — ألعاب وأدوات أندرويد تعمل دون إنترنت",
       description:
-        "ألعاب وأدوات أندرويد من GNeurone AI: لغز مواقف السيارات، الرسم بخط واحد، كلاسيكيات الأركيد، بحث عن الكلمات بالعربية، بوصلة القبلة وغيرها. تفتح في ثانية وتواصل العمل دون شبكة.",
+        "ألعاب وأدوات أندرويد من GNeurone AI: لغز مواقف السيارات، وصل النقاط في شبكة، كلاسيكيات الأركيد، بحث عن الكلمات بالعربية، بوصلة القبلة وغيرها. تفتح في ثانية وتواصل العمل دون شبكة.",
       ogDescription: "تطبيقات أندرويد تفتح في ثانية وتواصل العمل دون شبكة.",
     },
     nav: {
@@ -548,14 +548,14 @@ export const strings = {
         description: "ستون ازدحامًا لتفكّه. كل مرحلة حُلَّت بالحاسوب قبل النشر، فعدد النقلات الأمثل معروف — حاول أن تبلغه.",
       },
       arcade: {
-        tagline: "مجموعة من خمسة عشر لغزًا",
+        tagline: "مجموعة من ثلاثة عشر لغزًا",
         description:
-          "خمسة عشر كلاسيكيًا في تطبيق واحد: ترتيب القوارير، 2048، لعبة التزحلق، أبراج هانوي، الأفعى وعشرة غيرها. أيقونة واحدة على شاشتك، وسهرة كاملة خلفها.",
+          "ثلاثة عشر كلاسيكيًا في تطبيق واحد: ترتيب القوارير، 2048، لعبة التزحلق، أبراج هانوي، الأفعى وثمانية غيرها. أيقونة واحدة على شاشتك، وسهرة كاملة خلفها.",
       },
       oneline: {
-        tagline: "لغز الرسم بخط واحد",
+        tagline: "صِل النقاط واملأ الشبكة",
         description:
-          "خمسة وأربعون شكلًا تُرسم دون رفع إصبعك، جميعها مُتحقَّق من قابلية حلّها قبل النشر. بلا كلمة نص واحدة، فهي تُلعب بأي لغة.",
+          "صِل كل زوج من النقاط دون ترك خانة فارغة. شبكات تُولَّد بلا نهاية وقابلة للحل بحكم بنائها. بلا كلمة نص واحدة، فهي تُلعب بأي لغة.",
       },
     },
     privacy: {
@@ -654,7 +654,7 @@ export const strings = {
     home: {
       title: "Haythem Studio — Juegos y utilidades Android que funcionan sin conexión",
       description:
-        "Juegos y utilidades Android de GNeurone AI: rompecabezas de aparcamiento, trazo único, clásicos de arcade, sopa de letras en árabe, brújula Qibla y más. Se abren en un segundo y siguen funcionando sin cobertura.",
+        "Juegos y utilidades Android de GNeurone AI: rompecabezas de aparcamiento, unir puntos en una cuadrícula, clásicos de arcade, sopa de letras en árabe, brújula Qibla y más. Se abren en un segundo y siguen funcionando sin cobertura.",
       ogDescription: "Aplicaciones Android que se abren en un segundo y siguen funcionando sin cobertura.",
     },
     nav: {
@@ -759,14 +759,14 @@ export const strings = {
           "Sesenta atascos que desenredar. Cada uno fue resuelto por ordenador antes de publicarse, así que el número óptimo de movimientos se conoce: iguálelo si puede.",
       },
       arcade: {
-        tagline: "Colección de quince rompecabezas",
+        tagline: "Colección de trece rompecabezas",
         description:
-          "Quince clásicos en una sola aplicación: clasificación de frascos, 2048, puzle deslizante, Hanói, serpiente y diez más. Un icono en la pantalla de inicio, una tarde de juego detrás.",
+          "Trece clásicos en una sola aplicación: clasificación de frascos, 2048, puzle deslizante, Hanói, serpiente y ocho más. Un icono en la pantalla de inicio, una tarde de juego detrás.",
       },
       oneline: {
-        tagline: "Rompecabezas de trazo único",
+        tagline: "Une los puntos, llena la cuadrícula",
         description:
-          "Cuarenta y cinco figuras que se dibujan sin levantar el dedo, todas verificadas como resolubles antes de publicarse. Ni una palabra de texto, así que se juega en cualquier idioma.",
+          "Une cada par de puntos sin dejar ninguna casilla vacía. Cuadrículas generadas sin fin y resolubles por construcción. Ni una palabra de texto, así que se juega en cualquier idioma.",
       },
     },
     privacy: {
@@ -874,7 +874,7 @@ export const strings = {
     home: {
       title: "Haythem Studio — Jogos e utilitários Android que funcionam offline",
       description:
-        "Jogos e utilitários Android da GNeurone AI: quebra-cabeças de estacionamento, traço único, clássicos de arcade, caça-palavras em árabe, bússola Qibla e mais. Abrem num segundo e continuam sem rede.",
+        "Jogos e utilitários Android da GNeurone AI: quebra-cabeças de estacionamento, ligar pontos numa grelha, clássicos de arcade, caça-palavras em árabe, bússola Qibla e mais. Abrem num segundo e continuam sem rede.",
       ogDescription: "Aplicações Android que abrem num segundo e continuam sem rede.",
     },
     nav: {
@@ -978,14 +978,14 @@ export const strings = {
           "Sessenta engarrafamentos para desenredar. Cada um foi resolvido por computador antes da publicação, por isso o número ótimo de movimentos é conhecido: iguale-o se conseguir.",
       },
       arcade: {
-        tagline: "Coleção de quinze quebra-cabeças",
+        tagline: "Coleção de treze quebra-cabeças",
         description:
-          "Quinze clássicos numa única aplicação: separação de frascos, 2048, jogo deslizante, Hanói, cobra e mais dez. Um ícone no ecrã inicial, uma noite de jogo por trás.",
+          "Treze clássicos numa única aplicação: separação de frascos, 2048, jogo deslizante, Hanói, cobra e mais oito. Um ícone no ecrã inicial, uma noite de jogo por trás.",
       },
       oneline: {
-        tagline: "Quebra-cabeças de traço único",
+        tagline: "Liga os pontos, preenche a grelha",
         description:
-          "Quarenta e cinco figuras para desenhar sem levantar o dedo, todas verificadas como solucionáveis antes da publicação. Nem uma palavra de texto, por isso joga-se em qualquer idioma.",
+          "Liga cada par de pontos sem deixar nenhuma casa vazia. Grelhas geradas sem fim e solucionáveis por construção. Nem uma palavra de texto, por isso joga-se em qualquer idioma.",
       },
     },
     privacy: {

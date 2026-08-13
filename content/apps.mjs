@@ -69,7 +69,7 @@ export const apps = [
     pkg: "com.haythemstudio.arcadelab",
     accent: "#3ddc97",
     tag: "collection",
-    levels: 15,
+    levels: 13,
     permissions: [],
     storage: "game",
   },
@@ -81,6 +81,8 @@ export const apps = [
     pkg: "com.haythemstudio.onelinepuzzle",
     accent: "#4cc9f0",
     tag: "minimal",
+    // Les grilles sont generees a la demande, sans plafond : ce chiffre est un
+    // plancher, pas un catalogue. Le compteur du hero affiche un « + ».
     levels: 45,
     permissions: [],
     storage: "game",
