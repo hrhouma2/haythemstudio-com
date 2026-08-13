@@ -173,7 +173,7 @@ export const strings = {
         "It is linked to no identifier that could recognise you.",
       ],
       locationOutro1:
-        "The permission is not requested at first launch, but when the application actually needs it. You may refuse it: the application stays usable, the Hijri calendar and the 99 names work without a location.",
+        "The permission is requested as soon as you open the application, because the Qibla is the tab it starts on and the direction cannot be computed without it. You may refuse it: the application stays usable, you pick a city from a list, and the Hijri calendar, the 99 names and the prayer beads work without any location at all.",
       locationOutro2:
         "You can revoke this permission at any time in the Android settings of your phone. Clearing the data of the application removes the last stored location.",
       notificationsHeading: "Notifications",
@@ -393,7 +393,7 @@ export const strings = {
         "Elle n’est associée à aucun identifiant permettant de vous reconnaître.",
       ],
       locationOutro1:
-        "L’autorisation n’est pas demandée au premier lancement, mais au moment où l’application en a besoin. Vous pouvez la refuser : l’application reste utilisable, le calendrier hégirien et les 99 noms fonctionnent sans position.",
+        "L’autorisation est demandée dès l’ouverture de l’application, parce que la Qibla est l’onglet sur lequel elle démarre et que la direction ne se calcule pas sans position. Vous pouvez la refuser : l’application reste utilisable, vous choisissez une ville dans une liste, et le calendrier hégirien, les 99 noms et le chapelet fonctionnent sans aucune position.",
       locationOutro2:
         "Vous pouvez révoquer cette autorisation à tout moment dans les réglages Android de votre téléphone. Effacer les données de l’application supprime la dernière position mémorisée.",
       notificationsHeading: "Notifications",
@@ -601,7 +601,7 @@ export const strings = {
         "لا يُربط بأي معرّف يمكن أن يميّزك.",
       ],
       locationOutro1:
-        "لا يُطلب الإذن عند أول تشغيل، بل عندما يحتاجه التطبيق فعلًا. ويمكنك رفضه: يبقى التطبيق صالحًا للاستعمال، ويعمل التقويم الهجري والأسماء التسعة والتسعون دون موقع.",
+        "يُطلب الإذن فور فتح التطبيق، لأن القبلة هي التبويب الذي يبدأ عنده، ولا يمكن حساب الاتجاه دون موقع. ويمكنك رفضه: يبقى التطبيق صالحًا للاستعمال، وتختار مدينة من قائمة، ويعمل التقويم الهجري والأسماء التسعة والتسعون والمسبحة دون أي موقع.",
       locationOutro2:
         "يمكنك سحب هذا الإذن في أي وقت من إعدادات أندرويد في هاتفك. ومسح بيانات التطبيق يحذف آخر موقع محفوظ.",
       notificationsHeading: "الإشعارات",
@@ -816,7 +816,7 @@ export const strings = {
         "No se asocia a ningún identificador que permita reconocerle.",
       ],
       locationOutro1:
-        "El permiso no se solicita en el primer inicio, sino cuando la aplicación lo necesita realmente. Puede rechazarlo: la aplicación sigue siendo utilizable, el calendario hégira y los 99 nombres funcionan sin ubicación.",
+        "El permiso se solicita nada más abrir la aplicación, porque la Qibla es la pestaña con la que arranca y la dirección no se calcula sin posición. Puede rechazarlo: la aplicación sigue siendo utilizable, elige una ciudad de una lista, y el calendario hégira, los 99 nombres y el rosario funcionan sin ninguna ubicación.",
       locationOutro2:
         "Puede revocar este permiso en cualquier momento en los ajustes de Android de su teléfono. Borrar los datos de la aplicación elimina la última posición memorizada.",
       notificationsHeading: "Notificaciones",
@@ -1035,7 +1035,7 @@ export const strings = {
         "Não é associada a qualquer identificador que permita reconhecê-lo.",
       ],
       locationOutro1:
-        "A permissão não é pedida no primeiro arranque, mas quando a aplicação realmente precisa dela. Pode recusá-la: a aplicação continua utilizável, o calendário hégira e os 99 nomes funcionam sem posição.",
+        "A permissão é pedida assim que abre a aplicação, porque a Qibla é o separador com que ela arranca e a direção não se calcula sem posição. Pode recusá-la: a aplicação continua utilizável, escolhe uma cidade numa lista, e o calendário hégira, os 99 nomes e o rosário funcionam sem qualquer posição.",
       locationOutro2:
         "Pode revogar esta permissão a qualquer momento nas definições Android do seu telemóvel. Apagar os dados da aplicação remove a última posição memorizada.",
       notificationsHeading: "Notificações",
